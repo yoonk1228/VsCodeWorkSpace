@@ -1,0 +1,43 @@
+/* Css style sheet */
+
+* {
+    font-size: 24px;
+    margin: 0px;
+}
+
+#advertise {
+    height:39px;
+    background-color: yellowgreen;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+#header {
+    height:102px;
+    background-color: brown;
+}
+
+#image {
+    height:500px;
+    background-color: darkcyan;
+
+}
+
+#content-section1 {
+    height: 920px;
+    background-color: darkkhaki;
+    margin: 30px 0 30px 0;
+}
+
+#content-section2 {
+    height: 429px;
+    background-color: dodgerblue;
+}
+
+#bottom-container {
+    height: 138px;
+    background-color: fuchsia;
+    padding: 20px 0 20px 0;
+    box-sizing: border-box;
+    margin: 50px 0 0 0;
+}
