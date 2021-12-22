@@ -48,10 +48,6 @@ ul,li{
     box-sizing: border-box;
 }
 
-.visual {
-    hieght: 300px;
-}
-
 .visual > img {
     display: block;
     margin: 0 auto;
