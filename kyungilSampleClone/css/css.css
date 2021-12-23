@@ -7,8 +7,35 @@
     color: chocolate;
 }
 
+h3 {
+    color: #323232;
+    vertical-align: top;
+    box-sizing: border-box;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
 ul,li{
     list-style: none;
+}
+
+.content-community > ul {
+    width: 100%;
+    height: 460px;
+    display: block;
+}
+
+.content-community h3 {
+    position: relative;
+}
+
+.content-community  h3  a.plusBtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    vertical-align: top;
 }
 
 #wrap{
@@ -114,6 +141,7 @@ logo에다가만 float는 주게되면 옆에 붙는다.
     /* 50% 설정시 영역 벗어남 이슈 */
     width: 49%;
     /*display: inline-block;*/
+    height: 890px;
     float: left;
     border-top: 1px solid #323232;
     border-left: 1px solid #323232;
@@ -225,13 +253,91 @@ logo에다가만 float는 주게되면 옆에 붙는다.
     width: 49%;
     /*display: inline-block;*/
     /* float를 사용하니, 영역내 요소 정렬이 자동으로 해결 됐다. */
-    float: right;
+    float: left;
+    height: 890px;
+    border-top: 1px solid #323232;
+    border-left: 1px solid #323232;
 }
 
-.content-community > ul li {
-    width: 49%;
+.photozone {
+    margin-top: 40px;
+}
+
+.content-community > ul > li {
+    width: 50%;
+    float: left;
     display: inline-block;
+    box-sizing: border-box;
     padding: 20px;
+    border-right: 1px solid #323232;
+    border-bottom: 1px solid #323232;
+}
+
+.bg-gray {
+    background-color: #fafafa;
+}
+
+.content-community > ul > li {
+    float: left;
+    height: 460px;
+    border-bottom: 1px solid #ececec;
+    vertical-align: top;
+}
+
+.main-interview > a.prev {
+    position: absolute;
+    left: -15px;
+    top: 200px;
+    width: 20px;
+    height: 30px;
+    background: #eee;
+    line-height: 30px;
+    color: #fff;
+    outline: 0;
+}
+
+.main-interview > a.next {
+    position: absolute;
+    left: 270px;
+    top: 200px;
+    width: 20px;
+    height: 30px;
+    background: #eee;
+    line-height: 30px;
+    color: #fff;
+    outline: 0;
+}
+
+.content-community > ul > li.review > .main-review > ul > li {
+    padding: 5px 10px;
+    background: #fff;
+    margin-top: 5px;
+    border: 1px solid #ececec;
+}
+
+.content-community > ul > li.review > .main-review > ul > li > a,p {
+    font-size: 14px;
+    line-height: 24px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.content-community > ul > li.review > .main-review > ul > li > a {
+    color: #323232;
+    white-space: nowrap;
+    display: block;
+}
+
+.content-community > ul > li.review > .main-review > ul > li > p {
+    color: #323232;
+    display: block;
+    text-align: right;
+}
+
+.youtube {
+    display: block;
+    height: 430px;
+    vertical-align: top;
 }
 
 #footer {
