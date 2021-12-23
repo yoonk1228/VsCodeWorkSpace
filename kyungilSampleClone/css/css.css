@@ -4,12 +4,15 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
-    color: aliceblue;
-    text-align: center;
+    color: chocolate;
 }
 
 ul,li{
     list-style: none;
+}
+
+#wrap{
+    width: 100%;
 }
 
 .main_header {
@@ -18,15 +21,21 @@ ul,li{
     background-color: black;
 }
 
+/* float left 인라인 블록형태로 바꿔주고 아래있는 애들이 블록이었던 애들이어도 붙는 현상이 있다.
+float left는 내 아래에 있는 엘리먼트에도 영향을 받는다. (위 아래)
+logo에다가만 float는 주게되면 옆에 붙는다.
+ */
 .header > #logo {
     padding-top: 20px;
     float: left;
 }
 
+/* ul전체에다가 float right를 주는거다. (로고에다 left를 줬잖슴) */
 .header > #menu {
     float: right;
 }
 
+/* li들도 float를 줘서 인라인블록형태를 줘서 정렬을 시키는거다 */
 .header > #menu >li {
     float: left;
     font-size: 20px;
@@ -39,6 +48,10 @@ ul,li{
     width: 180px;
     text-align: center;
     padding: 40px 0 40px 0;
+    /* 글자 간격을 좁혀주고 늘려주고 */
+    /* 웹에서 사용할때 가장 보기좋은 폰트 크기 : 12px */
+    /* 메뉴같은 경우는 폰트가 엄청 커지는데, 뚱뚱하고 안이뻐보인다. 이때 letter-spacing으로 처리해 줄 수 있다. */
+    /* letter-spacing: -1px; */
 }
 
 .header {
@@ -49,6 +62,8 @@ ul,li{
 }
 
 #visual > img {
+    width: 1920px;
+    height: 600px;
     display: block;
     margin: 0 auto;
 }
@@ -61,6 +76,7 @@ ul,li{
     position: relative;
     background-color: rgb(0,0,0,0.5);
     bottom: 39px;
+    text-align: center;
 }
 
 .visual-menu > ul {
@@ -85,18 +101,140 @@ ul,li{
 
 .visual-menu > ul > li > a:hover{
     opacity: 0.5;
-
 }
 
-.content-section {
-    margin-top: 30px;
-}
-
-.content-section > .container {
+#content {
     width: 1200px;
-    height: 300px;
-    background-color: chocolate;
+    height: 1000px;
     margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.content-lecture {
+    /* 50% 설정시 영역 벗어남 이슈 */
+    width: 600px;
+    display: inline-block;
+    float: left;
+    border-top: 1px solid #323232;
+    border-left: 1px solid #323232;
+}
+
+.content-lecture > ul > li{
+    width: 49%;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 20px;
+    /* 요소의 공간만큼 이미지가 계~속 들어간다. */
+    /* no-repeat 계~속 들어가던 반복을 없애줌. */
+    /* bottom 10px right 10px 아래, 오른쪽으로 각 10px 띄겠다 */
+    /* 외곽선 그리기 */
+    /*border: 1px solid #323232;*/
+    border-right: 1px solid #323232;
+    border-bottom: 1px solid #323232;
+}
+
+.content-lecture > ul > li.con1 {
+    background: url('../img/con1.png') bottom 10px right 20px no-repeat;
+}
+
+.content-lecture > ul > li.con2 {
+    background: url('../img/con2.png') bottom 10px right 20px no-repeat;
+}
+
+.content-lecture > ul > li.con3 {
+    background: url('../img/con3.png') bottom 10px right 20px no-repeat;
+}
+
+.content-lecture > ul > li.con4 {
+    background: url('../img/con4.png') bottom 10px right 20px no-repeat;
+}
+
+.content-lecture > ul > li.con5 {
+    background: url('../img/con5.jpg') bottom 10px right 20px no-repeat;
+}
+
+.content-lecture > ul > li.con6 {
+    background: url('../img/con6.jpg') bottom 10px right 20px no-repeat;
+}
+
+.content-lecture > ul > li > h2 {
+    font-size: 23px;
+    color: #323232;
+}
+
+.content-lecture > ul > li > h2 > span {
+    display: block;
+    font-size: 12px;
+    color: #4689E1;
+}
+
+.content-lecture > ul > li > p {
+    width: 50%;
+    margin-top: 30px;
+    font-size: 13px;
+    color: #666666;
+}
+
+#content > .content-lecture > ul > li > a {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    /* 높이에서 2를 나누면 둥글게둥글게 나온다. */
+    background: #81b4f2;
+    border-radius: 15px;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 20px;
+}
+
+
+/* dl, dt, dd 설정하다 지쳐서 멈춤 */
+/*#content > .content-lecture > ul > li > dl,dt {
+    float: left;
+    width: 100%;
+}
+
+#content > .content-lecture > ul > li > dl {
+    width: 100%;
+    display: inline-block;
+}
+
+#content > .content-lecture > ul > li > dd {
+    width: 40px;
+}*/
+
+.con7 {
+
+}
+
+.con7 > dl,dt > a,dd {
+    color: #323232;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+    /*white-space: nowrap;*/
+    /*float: left;*/
+}
+
+.call > button {
+    cursor: pointer;
+    margin-left: 70px;
+    border-style: none;
+}
+
+.content-community {
+    width: 49%;
+    display: inline-block;
+    /* float를 사용하니, 영역내 요소 정렬이 자동으로 해결 됐다. */
+    float: right;
+}
+
+.content-community > ul li {
+    width: 49%;
+    display: inline-block;
+    padding: 20px;
 }
 
 #footer {
@@ -107,7 +245,7 @@ ul,li{
 #footer > .container {
     background: #323232;
     width: 1200px;
-    height: 200px;
+    height: 150px;
     margin: 0 auto;
 }
 
@@ -127,4 +265,8 @@ ul,li{
     width: 110px;
     box-sizing: border-box;
     font-size: 12px;
+}
+
+.footer-menu > ul > li > a {
+    color: aliceblue;
 }
