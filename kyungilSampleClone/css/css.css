@@ -112,8 +112,8 @@ logo에다가만 float는 주게되면 옆에 붙는다.
 
 .content-lecture {
     /* 50% 설정시 영역 벗어남 이슈 */
-    width: 600px;
-    display: inline-block;
+    width: 49%;
+    /*display: inline-block;*/
     float: left;
     border-top: 1px solid #323232;
     border-left: 1px solid #323232;
@@ -205,9 +205,6 @@ logo에다가만 float는 주게되면 옆에 붙는다.
     width: 40px;
 }*/
 
-.con7 {
-
-}
 
 .con7 > dl,dt > a,dd {
     color: #323232;
@@ -226,7 +223,7 @@ logo에다가만 float는 주게되면 옆에 붙는다.
 
 .content-community {
     width: 49%;
-    display: inline-block;
+    /*display: inline-block;*/
     /* float를 사용하니, 영역내 요소 정렬이 자동으로 해결 됐다. */
     float: right;
 }
