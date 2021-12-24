@@ -132,7 +132,7 @@ logo에다가만 float는 주게되면 옆에 붙는다.
 
 #content {
     width: 1200px;
-    height: 1000px;
+    height: 930px;
     margin: 0 auto;
     box-sizing: border-box;
 }
@@ -338,6 +338,39 @@ logo에다가만 float는 주게되면 옆에 붙는다.
     display: block;
     height: 430px;
     vertical-align: top;
+}
+
+#content2 > .container {
+    width: 1200px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.main-container > .ki-story, .main-container > .ki-broadcast, .main-container > .ki-column {
+    float: left;
+    width: 340px;
+    height: 430px;
+    margin-right: 15px;
+    padding: 20px;
+    border: 1px solid #ececec;
+}
+
+.main-container > .ki-story {
+    background-image: url(../img/bbs01.png);
+    background-repeat: no-repeat;
+    background-position: 300px 10px;
+}
+
+.main-container > .ki-broadcast {
+    background-image: url(../img/bbs02.png);
+    background-repeat: no-repeat;
+    background-position: 300px 10px;
+}
+
+.main-container > .ki-column {
+    background-image: url(../img/bbs03.png);
+    background-repeat: no-repeat;
+    background-position: 300px 10px;
 }
 
 #footer {
