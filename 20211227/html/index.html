@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css애니메이션</title>
+    <link href="../css/css.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <!-- input은 닫는 태그가 존재하지 않음. -->
+    <input type="checkbox" >
+    <!-- for안에 있는 값과 같은 id가 있는 input박스를 선택해 줄수 있는 아이. -->
+    <label for="">
+        check
+    </label>
+    <!--글자를 클릭해도 선택되는 이유: 웹 접근성때문. -->
+    <!-- 이걸 해내는게 label 태그다.-->
+    <br>
+    <input type="text" id="icon">
+    <label for="icon">
+        check2
+    </label>
+    <br>
+    <input type="checkbox" id="icon2">
+    <label for="icon2">
+        check3
+    </label>
+    <!-- 체크가 되어있는 상태와 체크 안되어있는 상태를 on/off로 구분하는 메뉴(아이콘)을 구성할 예정이다. -->
+    <input type="checkbox" id="icon3">
+    <label for="icon3">
+        check4 (체크박스 display:none)
+    </label>
+    <br>
+    <!-- 햄버거 만들기 -->
+    <input type="checkbox" id="hamburger">
+    <label for="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    <!-- check시 나오는 회색 바탕 만들기 -->
+    <!-- input - label - header 인접접근자 2개 써야함. -->
+    <div id="header">
+        <ul>
+            <li><a href=#">menu1</a></li>
+            <li><a href=#">menu2</a></li>
+            <li><a href=#">menu3</a></li>
+            <li><a href=#">menu4</a></li>
+            <li><a href=#">menu5</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
