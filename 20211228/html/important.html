@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            /*background: red;*/
+            background: red !important;
+        }
+
+        /*.box {
+            width: 300px;
+            height: 300px;
+            background: blue;
+        }
+
+        !* class여러개 주기를 사용 안했을때 2,3,4,5,6,..... *!
+        .box2 {
+            background: red;
+        }*/
+
+        .box {
+            width: 300px;
+            height: 300px;
+        }
+
+        .red {
+            background: red;
+        }
+
+        .blue {
+            background: blue;
+        }
+
+        .black {
+            background: black;
+        }
+
+        input:focus {
+            outline: none;
+            border: 1px solid #ddd;
+        }
+
+        #box2 {
+            width: 200px;
+            height: 200px;
+            background: red;
+            -webkit-border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- !important -->
+    <!-- 아래있는 코드를 무시하고, 위에 있는 코드를 실행하고 싶을 때 작성. -->
+    css 맨 끝에다가 작성해주기
+    <div id="box">
+            asdfadsfasdfasdf
+    </div>
+
+    <!-- class 여러개 주기 -->
+    <!-- box 7개 레드 블루 옐로우 그린 블랙 핑크 그레이  -->
+    <div class="box">
+        asfasdfasdfasdfasdfasdf
+    </div>
+    <div class="box red">
+        dfsdf
+    </div>
+    <div class="box blue">
+        dfsdf
+    </div>
+    <div class="box black">
+        dfsdf
+    </div>
+
+    <!-- focus: 클릭했을때 음.... 알려주는? 브라우저마다 다르게 나오는 머시꺵이? 아무튼 커서가 클릭했을때 focus다-->
+    <!-- input 요소에서 사용된다. -->
+    <input type="text">
+
+    <!-- -webkit-  -o-  css에서 쓰는거.  -->
+    <!-- -moz-  -ms-   -> 접두어  -->
+    <!-- background: -webkit-red; -->
+    <!-- 접두어가 필요한 css가 있는데, 브라우저별로 css처리를 다르게 하고 싶을때 쓴다. -->
+    <div id="box2">
+        asdfasdfsdfsdf
+    </div>
+</body>
+</html>

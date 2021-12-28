@@ -97,6 +97,28 @@ a {
     background: #303740;
 }
 
-.footer {
+.footer-top {
+    text-align: center;
+    color: aliceblue;
+}
 
+.footer-top > .menu-list {
+    display: inline-block;
+    width: 90px;
+    padding: 0 40px 0 40px;
+    margin: 10px 0 17px 0;
+}
+
+.footer-top > .menu-list > .menu-sublist > a {
+    display: block;
+    font-size: 14px;
+    text-align: left;
+    color: aliceblue;
+    line-height: 25px;
+    text-decoration: aliceblue;
+}
+
+.footer-top > .menu-list > .list-title {
+    padding: 16px 0;
+    text-align: left;
 }
