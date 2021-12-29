@@ -1,0 +1,21 @@
+/* CSS style sheet */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+#header {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: antiquewhite;
+}

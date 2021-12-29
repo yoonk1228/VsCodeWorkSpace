@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>write.html</title>
+</head>
+<body>
+    <h1>
+        <a href="index.html">게시판 로고</a>
+    </h1>
+    <!--
+        1. 제목
+        2. 내용
+        3. 이름 작성 (가입을 안했을 경우)
+        4. 비밀번호 (글 비밀번호)
+        5. 글쓰기 버튼
+
+        form element
+        url uri queryString
+
+        form의 속성
+        method
+        2가지
+        get, post
+        action =/ 링크
+
+        action
+        input 내용을 보낼 페이지
+
+
+        get: url로 내용을 전달
+        post: 안보이는곳으로 내용을 전달
+
+        모든 브라우저는 get요청만 렌더링을 진행한다.
+        post의 목적은 데이터의 전달이다. 렌더링이 아니다.
+
+
+     -->
+    <!-- 사용자가 입력한 값을 받아서 어디론가 보내주는걸 도와주는 태그 form -->
+    <!-- action을 동작시킬 버튼이 필요하다. submit -->
+    <!-- ? 이후는 queryString을 시작하겠다. -->
+
+    <!--<form method="get" action="view.html">-->
+    <form method="post" action="view.html">
+        <table>
+            <tr>
+                <td>제목</td>
+                <td><input type="text" name="subject"></td>
+                <!-- ?subject= ''''-->
+                <!-- key=value 중요!!! -->
+            </tr>
+            <tr>
+                <td>이름</td>
+                <td><input type="text" name="writer"></td>
+            </tr>
+            <tr>
+                <td>비밀번호</td>
+                <td><input type="password" name="password"></td>
+            </tr>
+            <tr>
+                <td>내용</td>
+                <td>
+                    <textarea name="content"></textarea>
+                </td>
+            </tr>
+        </table>
+        <!-- action을 동작시키기 위한 submit -->
+        <input type="submit" value="글쓰기">
+    </form>
+    <a href="view.html">글쓰기</a>
+</body>
+</html>
