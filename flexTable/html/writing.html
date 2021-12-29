@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>글쓰기</title>
+    <link href="../css/flex.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div id="main">
+        <div id="side-nav">
+            <h3>커뮤니티</h3>
+            <ul class="navbar">
+                <li><a href="notice.html">공지사항</a></li>
+                <li><a href="review.html">수강후기</a></li>
+                <li><a href="story.html">KI이야기</a></li>
+                <li><a href="editor.html">KI기자단</a></li>
+                <li><a href="column.html">교수칼럼</a></li>
+                <li><a href="blog.html">네이버블로그</a></li>
+            </ul>
+        </div>
+        <div id="board">
+            <!-- get방식으로 보내고요, 작동하면 수강후기로 갈겁니다-->
+            <form method="get" action="review.html">
+                <table>
+                    <tr>
+                        <td>제목</td>
+                        <td><input type="text" name="subject" placeholder="제목을 써주세요"> </td>
+                    </tr>
+                    <tr>
+                        <td>패스워드</td>
+                        <td><input type="password" name="password" placeholder="글 비밀번호를 적어주세요."></td>
+                    </tr>
+                    <tr>
+                        <td>내용</td>
+                        <td>
+                            <textarea placeholder="글 내용을 적어주세요." name="content"
+                                      style="width:165px; height: 150px;">
+                            </textarea>
+                        </td>
+                    </tr>
+                </table>
+                <input type="submit" value="글쓰기" style="float: right;">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
