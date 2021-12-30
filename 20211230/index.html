@@ -1,0 +1,188 @@
+<!--v8엔진 사용, es6(브라우저와 node에 둘다 쓸수있는 js문법-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>js시작</title>
+    <!-- script로 시작 -->
+    <script type="text/javascript">
+        /* 변수 variable
+            변하는 수, 변하는 값
+
+            예약어
+            내 마음대로 작성해도 되는 부분과
+            정해진 대로 써야되는 부분이 있다.
+            정해진 대로 써야되는 부분이 예약어.
+
+            let, const 변수(예약어)- ES6 변수를 선언하는 예약어.
+        */
+        /* let - 예약어, yoon - 변수(이름) */
+        /* 변수명은 시작을 숫자로 할 수 없다. 특수문자도 적당한 것만. */
+        let yoon;
+        /* 변수선언, 변수명*/
+        /*
+            = (대입 연산자)
+            1=1 -> 1이라는 곳에 1을 집어넣겠다.
+        */
+        yoon = 427;
+        /* 출력문, 출력하고 싶은 내용을 적으면 된다. */
+        console.log(yoon);
+
+        /* 데이터타입
+            숫자 12323434534564567
+            boolean(불리언) 참과 거짓만 true, false
+            문자 '' "" ``
+        */
+        let number;
+        number = 10;
+        console.log(number);
+
+        let bool;
+        bool = true;
+        console.log(bool);
+        bool = false;
+        console.log(bool);
+
+        let str
+        str = `안녕하세요`;
+        console.log(str);
+        str = "안녕하세요!";
+        console.log(str);
+        str = `안녕하세요!@`;
+        console.log(str);
+
+        /* 데이터 타입에는 하나만 저장할 수 있거나 여러개를 저장 할수 있는 타입들이 각각 존재한다.*/
+
+        /*
+            배열, 객체
+            배열 -> [1,2,3] enter 키 근처에 있음. p 오른쪽에.
+            인덱스
+
+            객체
+            선언하는 방법: { }
+
+            key 변수를 가르키는 역할.
+        */
+        let arr;
+        arr = [1,2,3];
+        console.log(arr);
+        /* 인덱스 */
+        console.log(arr[0]);
+        console.log(arr[1]);
+
+        arr = ['짱구','철수','훈이'];
+        console.log(arr[0]);
+        console.log(arr[1]);
+
+        let obj;
+        obj = {
+            /* key: value */
+            name: '짱구',
+            age: 7,
+            height: 137,
+        }
+        console.log(obj);
+        console.log(obj.name);
+        console.log(obj.height);
+
+        /*
+            변수선언 let, const
+            대입연산자 =
+            출력문 (console.log()) 나의 입출력 결과를 확인할때 사용.
+            변수 선언의 형태
+            let 변수명 = xxx 변수값 (변수값에는 데이터 타입이라는 것이 존재)
+
+            데이터 타입을 두가지로 나누면,
+            변수 하나에 데이터 하나
+            - number, boolean, string
+            변수 하나에 데이터 여러개 (군집형)
+            - array (index), object (key:value)
+
+            변수는 메모리에 저장된다.
+
+        */
+
+        let name = 'yoonjae';
+
+        /*
+            데이터를 저장한것을 연산해서 다른 결과값을 얻는것을 해본다.
+
+           산술연산자 ( + - / % ... )
+           비교연산자 (if문, for문)
+        */
+        console.log(1+2);
+
+        /*
+            나머지 연산자 %
+        */
+        console.log(7/5);
+        console.log(7%5);
+
+        /* 연결 연산자 */
+        /* 연산자라는건 앞에 있는 값의 데이터 타입에 따라 연산자 역할이 달라진다. */
+        /* js는 타입이 존재하지 않기 때문에 그렇다.*/
+        console.log('안녕'+'하세요');
+        console.log('안녕'+1);
+        /* 원래는 오류가 나야 정상인 코드. js라서 자유? 롭다. */
+        console.log(1+'안녕');
+
+        /* 비교연산자 1=1 같다 참이다. boolean */
+        /* 비교연산자 값은 결과물이 boolean타입으로 반환됨. */
+        /* 반환: 연산이 끝나고~~~~ */
+        console.log(1==1);
+        console.log(1==2);
+        console.log(1 > 2);
+
+        /* 비교연산자 == > < >= <=*/
+        /* 두 숫자를 비교해서 true인지 false인지 반환 */
+        console.log(2 <= 2);
+
+        /* 논리연산자
+        &&(AND) : 값(boolean) && 값(boolean)  둘다 true여야 true 반환
+        ||(OR) : 값 || 값   둘중에 하나만 true여도 true 반환
+        !(NOT) : !값 !true !false
+        */
+        console.log(true && true);
+        console.log(true || false);
+
+        /* 비교 연산자 두수를 비교하여 boolean 반환 */
+        /* 논리 연산자는 두개의 boolean을 확인해서 반환해주는 연산자. */
+        /* 비교랑 논리 연산자는 둘이 짝꿍! */
+        console.log(1<2 && 2<3);    //true
+        console.log(1<2 && 3<2);    //false
+
+        console.log(1<2 || 2<3);    //true
+        console.log(1<2 || 3<2);    //true
+
+        console.log(!(1<2) && 2<3); //false
+        console.log(1<2 && 2<3);    //true
+
+        /* if문 - 조건문 */
+        /*
+            true일 경우와 false일 경우를 처리하는 방식을 각각 처리하고 싶을 때 씀.
+
+            boolean 반환해주는 애들을 잘써야함.
+            (비교연산자)
+            (논리연산자)
+        */
+        let num1 = 1;
+        let num2 = 2;
+        if(num1<num2) {
+            console.log('안녕?!!!')
+            //참일 때 실행하는 코드영역
+        } else {
+            //거짓일 때 실행하는 코드영역
+            console.log('내일봐요~~~~')
+        }
+
+        /* for문 - 반복문 */
+        /* for(변수선언; boolean; 산술연산자) */
+        for(let i=0; i<10; i++) {
+            console.log(i)
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
