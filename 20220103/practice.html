@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>연습</title>
+    <script type="text/javascript">
+/*
+      console.log(
+          "|\_/|"+
+          "\n|qp|/}"+
+          "\n(0)
+
+      )
+*/
+/*
+    function brain(mask) {
+        if ((mask%5) == 0) {
+            console.log(mask/5 + '개')
+            console.log(1)
+        } else if ((mask/5) >= 1 && (mask % 5) == 3) {
+            console.log(parseInt(mask/5) + '+' + parseInt((mask%5)/3) + '개')
+            console.log(2)
+        } else if ((mask%3) == 0) {
+            console.log(mask/3 + '개')
+            console.log(3)
+        } else {
+            console.log(-1)
+        }
+    }
+*/
+/*    function brain(mask) {
+        if ((mask%5) == 0 && (mask/5) !== 0)  {
+            console.log('5개묶음' + (mask/5) + '개')
+        } else if ((mask%5) == 3){
+            console.log('5개묶음' + parseInt(mask/5) + '개' + '\n3개묶음' + parseInt((mask%5)/3) + '개')
+        } else if ((mask%5) == 1 || (mask%5) == 4) {
+            let pocket = ((mask/5)-1);
+            let pocket3 = (mask-(parseInt(pocket)*5))/3
+            console.log('5개묶음' + parseInt(pocket) + '개' + '\n3개묶음' + parseInt(pocket3) + '개')
+        } else if ((mask%3) == 0){
+            console.log('3개묶음' + mask/3 + '개')
+        } else if ((mask%5) == 0){
+            console.log('5개묶음' + mask/5 + '개')
+        } else if (mask < 10 && (mask%3) == 0) {
+            console.log(mask/3)
+        } else if (mask <10 && (mask%3) !== 0) {
+            console.log(-1)
+        } else {
+            console.log(-1)
+        }
+
+    }*/
+/*        function brain(mask) {
+            if ((mask%5) == 0) {
+                console.log('5개묶음' + mask/5 + '개')
+                console.log('1')
+            } else if((mask%3) == 0) {
+                console.log('3개묶음' + mask/3 + '개')
+            } else if ((mask-3)%5 == 0) {
+                console.log('5개묶음' + ((mask-3))/5 + '개' + '\n3개묶음' + (((mask))%5)/3 + '개')
+                console.log('2')
+            } else if ((mask-6)%5 == 0) {
+                console.log('5개묶음' + ((mask-6))/5 + '개' + '\n3개묶음' + (((mask))%5)/3 + '개')
+                console.log('3')
+            } else if ((mask-9)%5 == 0) {
+                console.log('5개묶음' + ((mask-9))/5 + '개' + '\n3개묶음' + (((mask))%5)/3 + '개')
+                console.log('4')
+            } else {
+                console.log(-1)
+            }
+        }
+
+        console.log(brain(14));*/
+function solution(n) {
+    let result = 0;
+    let five = 0;
+    let three = 0;
+    for (let i =parseInt(n/5); i>=0; i--){
+        if((n-(5*i))%3 == 0) {
+            five = i;
+            three = (n-(5*i))/3;
+            result = five + three;
+            break;
+        }else{
+            result = -1;
+        }
+    }
+    return result
+}
+
+console.log(solution(21));
+
+    </script>
+</head>
+<body>
+</body>
+</html>
