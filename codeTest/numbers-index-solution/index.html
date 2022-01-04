@@ -52,6 +52,20 @@
         console.log(arr)
         let sum = arr[0] + arr[1]
         console.log(sum)*/
+
+/*  정답코드 (곽인구 교수님것)
+        function solution(numbers){
+            let answer = []
+
+            let counting = numbers.reduce( (accumulator,value, index, array) => {
+                return [...accumulator,...array.slice(index+1).map(_=>_+value)]
+            },[])
+
+            answer = [...new Set(counting.sort((a,b)=>a-b))]
+
+            return answer
+        }
+*/
     </script>
 </head>
 <body>
