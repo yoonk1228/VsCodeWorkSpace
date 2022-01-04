@@ -14,7 +14,9 @@
         numbers의 길이는 2 이상 100 이하입니다.
         numbers의 모든 수는 0 이상 100 이하입니다.
         */
+
         function solution(numbers) {
+            /* numbers 를 result 배열로 */
             let result = [];
             for (let i=0; i<numbers.length; i++) {
                 let ind = numbers[i]
@@ -24,47 +26,58 @@
                     result.push(sum)
                 }
             }
+            console.log('numbers 배열대입')
             console.log(result)
-            let final = [];
+            /* 중복삭제 */
             for (let i=0; i<result.length; i++) {
+                let ind = result[i]
                 for (let j=i+1; j<result.length; j++) {
-                    if (result[i] == result[j]) {
-                        result.splice(i, 0)
-                        i--;
-                        j--;
-                        console.log(result)
-                    } else if(result[i] < result[j]) {
-                        result.splice(result.length, 1, result[j])
+                    let jnd = result[j]
+                    if (ind > jnd) {
+
+                    } else if (ind < jnd) {
+
                     } else {
-                        continue;
+                        result.splice(j,1) // 중복된 배열중 j번째 배열 데이터 1개 삭제
                     }
-                }   break;
+                }
+                console.log('---중복삭제중---')
+                console.log(result)
+            }
+            /* 정렬 */
+            for (let i=0; i<result.length; i++) {
+                minIndex = i;
+                for (let j=i+1; j<result.length; j++){
+                    let jnd = result[j]
+                    if(jnd < result[minIndex]) {
+                        minIndex = j;
+                    }
+                }
+                [result[i], result[minIndex]] = [result[minIndex], result[i]]; // 구조 분해 할당
+                console.log('---정렬 중---')
+                console.log(result)
             }
             return result;
         }
-
-        let arr = [5,0,2,7]
+        /* 입출력 */
         // let arr = [5,0,2,7]
+        let arr = [2,1,3,4,1]
         let quiz = solution(arr);
+        console.log('---결과---');
         console.log(quiz);
 
-/*        let arr = [2,1,3,4,1]
-        console.log(arr)
-        let sum = arr[0] + arr[1]
-        console.log(sum)*/
+/*      섹시코드 (곽인구 교수님)
+            function solution(numbers){
+                let answer = []
 
-/*  정답코드 (곽인구 교수님것)
-        function solution(numbers){
-            let answer = []
+                let counting = numbers.reduce( (accumulator,value, index, array) => {
+                    return [...accumulator,...array.slice(index+1).map(_=>_+value)]
+                },[])
 
-            let counting = numbers.reduce( (accumulator,value, index, array) => {
-                return [...accumulator,...array.slice(index+1).map(_=>_+value)]
-            },[])
+                answer = [...new Set(counting.sort((a,b)=>a-b))]
 
-            answer = [...new Set(counting.sort((a,b)=>a-b))]
-
-            return answer
-        }
+                return answer
+            }
 */
     </script>
 </head>

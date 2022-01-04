@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+         /* obj */
+         // array와 같은 군집형
+        let obj = {}
+        console.log(obj)
+         /*
+            변수하나에 데이터를 여러개 집어넣는다.
+            블록[0]넘버링
+
+            문자열로 처리가 가능.
+         */
+
+         block = {name:'ingoo'}
+         console.log(block)
+
+         console.log(block["name"])
+         console.log(block.name)
+         console.log(console)
+
+         block = {
+             name: "ingoo", // 속성: 속성값
+             /* return이 없는 함수 function create(): void */
+             create: function() { // 익명함수 (익명함수 이름을 써줘도 되고 안써줘도 된다
+                 console.log('함수생성')
+             },
+             doge: { //객체타입
+                 index: 1,
+                 nonce: 1023,
+             },
+             list: [
+                 10,20,30
+             ]
+         }
+
+         console.log(block)
+         block.name // 속성
+         block.create() // 메소드
+
+         console.log(block.doge.nonce)
+         console.log(block.list)
+         console.log(block.list[1])
+         console.log(block.list.length)
+
+         let arr = [10,20]
+         console.log(typeof arr) // js는 배열형태를 객체형태로 표현하고 있다.
+
+         let obj2 = {
+             0:10,
+             1:20,
+             3:30,
+             length:3
+         }
+         console.log(obj2)
+
+         // JAVA 객체지향
+         // Python 함수형
+         // Javascript prototype -> 객체지향적 혹은 함수형 언어로 만들수 있다.
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
