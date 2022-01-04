@@ -44,7 +44,7 @@
                 console.log('---중복삭제중---')
                 console.log(result)
             }
-            /* 정렬 */
+            /* 정렬1 */
             for (let i=0; i<result.length; i++) {
                 minIndex = i;
                 for (let j=i+1; j<result.length; j++){
@@ -57,6 +57,22 @@
                 console.log('---정렬 중---')
                 console.log(result)
             }
+
+/*
+            // 정렬2
+            result.sort(function(a,b) {
+                if(a > b) {
+                    return 1;
+                }
+                if(a === b) {
+                    return 0;
+                }
+                if(a < b) {
+                    return -1;
+                }
+            });
+*/
+            console.log(result)
             return result;
         }
         /* 입출력 */
