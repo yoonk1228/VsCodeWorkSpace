@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+    <script type="text/javascript">
+        /* 배열 */
+        /* 배열을 넣을건데 아무것도 안들어간 배열을 넣겠다. */
+        let arr = [];
+        console.log(arr);
+
+        arr= [10];
+        console.log(arr); // 데이터타입 : array
+        console.log(typeof arr);
+
+        console.log(arr.length); // 데이터타입 : number
+        console.log(typeof arr.length)
+
+        let str = "글자형이다~"
+        console.log(typeof str)
+
+        arr = [10,20]
+        console.log(arr)
+        console.log(arr.length)
+        console.log(typeof arr) // object
+
+        arr = [10,20,30,40,50,60,70,80,90,100]
+        arr.push(103) // push :  배열 뒤에다가 값을 하나 추가하는 행위
+        console.log(arr)
+        console.log(arr.length)
+
+        /* 메소드는 뒤에 ()가 붙고, 속성은 뒤에 ()가 없다. */
+        /* 메소드는 동사, 속성은 명사? */
+
+        console.log(arr[2]) // 30
+        console.log(arr[0]) // 10
+        console.log(arr[(arr.length)-1]) // 103
+
+        /* 블록 배열에 있는 모든값을 출력하세요. */
+        /* 반복문 0부터 10까지 출력 */
+        for (let i=0; i<arr.length; i++) {
+            console.log(arr[i])
+        }
+
+        arr.push(104)
+        for (let i=0; i<arr.length; i++) {
+            let res = arr[i]
+            console.log([i+1]+'번째 배열값은 ' + res + '입니다.')
+        }
+
+        console.log('|\\_/|')
+        console.log('|q p|   /}')
+        console.log('( 0 )"""\\')
+        console.log('|"^"`    |')
+        console.log('||_/=\\\\__|')
+
+        console.log("|\\_/|\n|q p|   /}\n( 0 )\"\"\"\\\n|\"^\"`    |\n||_/=\\\\__|")
+        console.log(' 멍멍이 ')
+
+/*        function format() {
+            let args = Array.prototype.slice.call (arguments, 1);
+            return arguments[0].replace (/\{(\d+)\}/g,
+                function (match, index) {
+                return args[index]; }); }
+        // 출처: https://marsland.tistory.com/469 [삽질하는 프로그래머 통통만두의 판톼스틱한 삽질기]
+*/
+
+/*        String.format = function() { let args = arguments; return args[0].replace(/{(\d+)}/g, function(match, num) { num = Number(num) + 1; return typeof(args[num]) != undefined ? args[num] : match; }); }
+
+        출처: https://bemeal2.tistory.com/275 [헝그리개발자]
+*/
+
+       /* let doggy1 = ('|\_/|')
+        let doggy2 = ('|q p|   /}')
+        let doggy3 = ('( 0 )"""\\')
+        let doggy4 = ('|"^"`    |')
+        let doggy5 = ('||_/=\\\\__|')
+        let doggy6 = ("|\\_/|\n|q p|   /}\n( 0 )\"\"\"\\\n|\"^\"`    |\n||_/=\\\\__|")*/
+
+        /* 배열형태로 강아지를 담아서 출력 */
+        let doggy7 = ['|\_/|\n','|q p|   /}\n','( 0 )"""\\\n','|"^"`    |\n','||_/=\\\\__|\n']
+
+        for (let i=0; i<5; i++) {
+            let dog = [];
+            let strdog = doggy7[i]
+            dog.push(strdog)
+            // console.log(dog)
+            console.log(strdog)
+        }
+        console.log('성공!')
+
+/*        for (let i=1; i<6; i++) {
+            let dog = [];
+            let String
+            String.format("{0}, {1}", "doggy", i)
+            console.log(String)
+            dog.push();
+            console.log(dog)
+        }
+*/
+    </script>
+</head>
+<body>
+
+</body>
+</html>
