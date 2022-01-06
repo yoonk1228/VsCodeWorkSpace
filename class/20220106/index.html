@@ -13,7 +13,7 @@
         console.log(str)
         // 쩜은 객체 .length
 
-        let str2 = new String("010-8955-7722") // { } 객체 형태로 저장
+        let str2 = new String("010-8955-7722") // { } 리터럴객체 형태로 저장
         console.log(typeof str2) // string도 결국 객체다
         console.log(str2.length) // 13
         console.log(str2[0]) // 0
@@ -55,7 +55,7 @@
         */
 
         let newArr = [1,2,3]
-
+        console.log(newArr)
         for (let i=0; i<newArr.length; i++) {
             console.log(newArr[i])
         }
@@ -65,14 +65,14 @@
         // newArr.forEach()
         // callback => 함수를 넣어라
 
-/*
-        function ingoo() {
+/*        function ingoo() {
             console.log(1)
-        }
-*/
+        }*/
+        // ingoo()
         newArr.forEach(ingoo) // 1, 1, 1
+        // function ingoo를 인자값으로 넣었다.
         // 함수를 실행하지 않고, 함수라는 텍스트를 인자값으로 넣었다.
-        ingoo() // 1
+        // ingoo() // 1
 
         function ingoo(value) {
             console.log(value)
