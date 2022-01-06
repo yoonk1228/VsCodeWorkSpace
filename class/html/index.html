@@ -1,0 +1,151 @@
+<!-- tag x  element -->
+<html>
+    <!--
+        head는 html의 내용을
+        '저장'해야 할때 쓰는 속성이다.
+    -->
+    <head>
+        <!--
+            title은
+            페이지 탭의 이름을 정한다.
+        -->
+        <title>탭 제목</title>
+    </head>
+    <!--
+        html에 한글을 작성시 문자가 깨지게 되는데,
+        이를 문서의 문자인코딩 방식을 명시 함으로서
+        해결한다. (utf-8)
+    -->
+    <meta charset="utf-8">
+    <!--
+        body는 html의 내용을 보여주는 공간이다.
+        body 안의 text가 웹 페이지에 렌더링 된다.
+    -->
+    <body>
+        Hello, world!!!
+
+        I'm AceBed!!
+        <!--
+            h1 h2 ... h6 숫자가 커질수록
+            글자 크기는 작아진다.
+        -->
+        <h1>제목1</h1>
+        <h2>제목2</h2>
+        <h3>제목3</h3>
+        <h4>제목4</h4>
+        <h5>제목5</h5>
+        <h6>제목6</h6>
+        <!--
+            ul은 목록을 나타낸다.
+            ul안의 li element는 text앞에 점이 붙는다.
+        -->
+        <ul>
+            <li>리스트1</li>
+            <li>리스트2</li>
+            <li>리스트3</li>
+            <li>리스트4</li>
+        </ul>
+
+        <!--
+            a 엘리먼트가 시작하는 부분에
+            내용을 넣을수가 있는데, 이것을
+            주로 속성이라고 한다. (href)
+        -->
+        <a href="https://naver.com">링크</a>
+        <!--
+            속성="속성값" / queryString
+            href 링크를 거는 속성값.
+            그 안에 들어간 값이 링크로 이동하는 값이다.
+        -->
+        <a href="https://google.com">구글로 이동</a>
+
+        <!--
+            div와 span은 영역을 잡을 때 사용한다.
+            그 중 div는 block속성을 가지고 있어서
+            element가 끝날 때 마다 한줄 한줄이 벌어진다.
+
+            반면 span은 inline속성으로
+            element안의 내용이 옆으로 붙어서 이어진다.
+
+            대부분의 element들은 block속성을 가지고 있으며
+            span을 이용해 옆으로 붙여 이을수 있다.
+        -->
+        <div>영역</div>
+        <span>작은영역</span>
+        <span>작은영역2</span>
+        <div>영역2</div>
+        <br>
+
+        <!--
+            input이 가지고 있는 속성값은 정말 많다.
+            그 중 placeholder는 내용이 없을 때
+            디폴트 값을 보여주는 속성값,
+            value는 처음에 디폴트로 보여주는 속성값이다.
+        -->
+        <input 
+            type="text" 
+            value="hello world!" 
+            placeholder="아이디를 입력해 주세요"
+        />
+        <br><br>
+
+        <input 
+            type="text" 
+            placeholder="패스워드를 입력해 주세요"
+        />
+        <br><br>
+        <!--
+            type속성은 input 입력시
+            안 보이는 비밀번호로 바꿔준다.
+        -->
+        <input
+            type="password"
+            placehorder="패스워드를 입력해 주세요"
+        />
+        <br><br><br>
+
+        <!--
+            button은 단일 element로 사용이 가능하다.
+        -->
+        <input type="button" value="로그인"/>
+        <button>로그인</button>
+        <input type="submit" value="로그인 제출"/>
+        <br><br>
+
+        <!--
+            radio속성은 다수의 선택지 중 한가지만
+            선택이 가능하다.
+        -->
+        <input 
+            type="radio" 
+            name="gender" 
+            id="men"
+        />
+        <!--
+            label을 이용해 radio와 묶어준다.
+        -->
+        <label for="men">남자</label>
+        <!--
+            checked속성값으로 최소 렌더링시
+            선택이 되어 있도록 한다.
+        -->
+        <input 
+            type="radio" 
+            name="gender"
+            id="women"
+            checked="checked"
+        />
+        <label for="women">여자</label>
+        <br><br>
+
+
+        <!-- radio와 다르게 checkbox속성은
+            다중 선택이 가능하다.
+        -->
+        <input type="checkbox" checked="checked">컴퓨터
+        <input type="checkbox">영화
+        <input type="checkbox">독서
+        <input type="checkbox">운동
+        <input type="checkbox">잠
+    </body>
+</html>

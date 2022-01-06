@@ -1,0 +1,408 @@
+/* CSS style sheet */
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: chocolate;
+}
+
+h3 {
+    color: #323232;
+    vertical-align: top;
+    box-sizing: border-box;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+ul,li{
+    list-style: none;
+}
+
+.content-community > ul {
+    width: 100%;
+    height: 460px;
+    display: block;
+}
+
+.content-community h3 {
+    position: relative;
+}
+
+.content-community  h3  a.plusBtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    vertical-align: top;
+}
+
+#wrap{
+    width: 100%;
+}
+
+.main_header {
+    width: 100%;
+    height: 40px;
+    background-color: black;
+}
+
+/* float left 인라인 블록형태로 바꿔주고 아래있는 애들이 블록이었던 애들이어도 붙는 현상이 있다.
+float left는 내 아래에 있는 엘리먼트에도 영향을 받는다. (위 아래)
+logo에다가만 float는 주게되면 옆에 붙는다.
+ */
+.header > #logo {
+    padding-top: 20px;
+    float: left;
+}
+
+/* ul전체에다가 float right를 주는거다. (로고에다 left를 줬잖슴) */
+.header > #menu {
+    float: right;
+}
+
+/* li들도 float를 줘서 인라인블록형태를 줘서 정렬을 시키는거다 */
+.header > #menu >li {
+    float: left;
+    font-size: 20px;
+}
+
+.header > #menu > li > a {
+    font-weight: bold;
+    color: black;
+    display: inline-block;
+    width: 180px;
+    text-align: center;
+    padding: 40px 0 40px 0;
+    /* 글자 간격을 좁혀주고 늘려주고 */
+    /* 웹에서 사용할때 가장 보기좋은 폰트 크기 : 12px */
+    /* 메뉴같은 경우는 폰트가 엄청 커지는데, 뚱뚱하고 안이뻐보인다. 이때 letter-spacing으로 처리해 줄 수 있다. */
+    /* letter-spacing: -1px; */
+}
+
+.header {
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+#visual > img {
+    width: 1920px;
+    height: 600px;
+    display: block;
+    margin: 0 auto;
+}
+
+.visual-menu {
+    /*width: 1920px;
+    width: 100%;*/
+    height: 42px;
+    margin: 0 auto;
+    position: relative;
+    background-color: rgb(0,0,0,0.5);
+    bottom: 39px;
+    text-align: center;
+}
+
+.visual-menu > ul {
+    margin: 0 auto;
+    display: inline-block;
+    padding-top: 9px;
+}
+
+.visual-menu > ul > li {
+    float: left;
+}
+
+.visual-menu > ul > li > a{
+    color: aliceblue;
+    padding: 10px 30px;
+}
+
+.visual-menu > ul > li > a.on{
+    opacity: 1;
+    background-color: black;
+}
+
+.visual-menu > ul > li > a:hover{
+    opacity: 0.5;
+}
+
+#content {
+    width: 1200px;
+    height: 930px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.content-lecture {
+    /* 50% 설정시 영역 벗어남 이슈 */
+    width: 49%;
+    /*display: inline-block;*/
+    height: 890px;
+    float: left;
+    border-top: 1px solid #323232;
+    border-left: 1px solid #323232;
+}
+
+.content-lecture > ul > li{
+    width: 49%;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 20px;
+    /* 요소의 공간만큼 이미지가 계~속 들어간다. */
+    /* no-repeat 계~속 들어가던 반복을 없애줌. */
+    /* bottom 10px right 10px 아래, 오른쪽으로 각 10px 띄겠다 */
+    /* 외곽선 그리기 */
+    /*border: 1px solid #323232;*/
+    border-right: 1px solid #323232;
+    border-bottom: 1px solid #323232;
+}
+
+.content-lecture > ul > li.con1 {
+    background: url('../img/con1.png') bottom 10px right 20px no-repeat;
+}
+
+.content-lecture > ul > li.con2 {
+    background: url('../img/con2.png') bottom 10px right 20px no-repeat;
+}
+
+.content-lecture > ul > li.con3 {
+    background: url('../img/con3.png') bottom 10px right 20px no-repeat;
+}
+
+.content-lecture > ul > li.con4 {
+    background: url('../img/con4.png') bottom 10px right 20px no-repeat;
+}
+
+.content-lecture > ul > li.con5 {
+    background: url('../img/con5.jpg') bottom 10px right 20px no-repeat;
+}
+
+.content-lecture > ul > li.con6 {
+    background: url('../img/con6.jpg') bottom 10px right 20px no-repeat;
+}
+
+.content-lecture > ul > li > h2 {
+    font-size: 23px;
+    color: #323232;
+}
+
+.content-lecture > ul > li > h2 > span {
+    display: block;
+    font-size: 12px;
+    color: #4689E1;
+}
+
+.content-lecture > ul > li > p {
+    width: 50%;
+    margin-top: 30px;
+    font-size: 13px;
+    color: #666666;
+}
+
+#content > .content-lecture > ul > li > a {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    /* 높이에서 2를 나누면 둥글게둥글게 나온다. */
+    background: #81b4f2;
+    border-radius: 15px;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 20px;
+}
+
+
+/* dl, dt, dd 설정하다 지쳐서 멈춤 */
+/*#content > .content-lecture > ul > li > dl,dt {
+    float: left;
+    width: 100%;
+}
+
+#content > .content-lecture > ul > li > dl {
+    width: 100%;
+    display: inline-block;
+}
+
+#content > .content-lecture > ul > li > dd {
+    width: 40px;
+}*/
+
+
+.con7 > dl,dt > a,dd {
+    color: #323232;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+    /*white-space: nowrap;*/
+    /*float: left;*/
+}
+
+.call > button {
+    cursor: pointer;
+    margin-left: 70px;
+    border-style: none;
+}
+
+.content-community {
+    width: 49%;
+    /*display: inline-block;*/
+    /* float를 사용하니, 영역내 요소 정렬이 자동으로 해결 됐다. */
+    float: left;
+    height: 890px;
+    border-top: 1px solid #323232;
+    border-left: 1px solid #323232;
+}
+
+.photozone {
+    margin-top: 40px;
+}
+
+.content-community > ul > li {
+    width: 50%;
+    float: left;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 20px;
+    border-right: 1px solid #323232;
+    border-bottom: 1px solid #323232;
+}
+
+.bg-gray {
+    background-color: #fafafa;
+}
+
+.content-community > ul > li {
+    float: left;
+    height: 460px;
+    border-bottom: 1px solid #ececec;
+    vertical-align: top;
+}
+
+.main-interview > a.prev {
+    position: absolute;
+    left: -15px;
+    top: 200px;
+    width: 20px;
+    height: 30px;
+    background: #eee;
+    line-height: 30px;
+    color: #fff;
+    outline: 0;
+}
+
+.main-interview > a.next {
+    position: absolute;
+    left: 270px;
+    top: 200px;
+    width: 20px;
+    height: 30px;
+    background: #eee;
+    line-height: 30px;
+    color: #fff;
+    outline: 0;
+}
+
+.content-community > ul > li.review > .main-review > ul > li {
+    padding: 5px 10px;
+    background: #fff;
+    margin-top: 5px;
+    border: 1px solid #ececec;
+}
+
+.content-community > ul > li.review > .main-review > ul > li > a,p {
+    font-size: 14px;
+    line-height: 24px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.content-community > ul > li.review > .main-review > ul > li > a {
+    color: #323232;
+    white-space: nowrap;
+    display: block;
+}
+
+.content-community > ul > li.review > .main-review > ul > li > p {
+    color: #323232;
+    display: block;
+    text-align: right;
+}
+
+.youtube {
+    display: block;
+    height: 430px;
+    vertical-align: top;
+}
+
+#content2 > .container {
+    width: 1200px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.main-container > .ki-story, .main-container > .ki-broadcast, .main-container > .ki-column {
+    float: left;
+    width: 340px;
+    height: 430px;
+    margin-right: 15px;
+    padding: 20px;
+    border: 1px solid #ececec;
+}
+
+.main-container > .ki-story {
+    background-image: url(../img/bbs01.png);
+    background-repeat: no-repeat;
+    background-position: 300px 10px;
+}
+
+.main-container > .ki-broadcast {
+    background-image: url(../img/bbs02.png);
+    background-repeat: no-repeat;
+    background-position: 300px 10px;
+}
+
+.main-container > .ki-column {
+    background-image: url(../img/bbs03.png);
+    background-repeat: no-repeat;
+    background-position: 300px 10px;
+}
+
+#footer {
+    margin: 50px 0 0 0;
+    background: #323232;
+}
+
+#footer > .container {
+    background: #323232;
+    width: 1200px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+#footer > .container > h1 > img {
+    float: left;
+}
+
+.footer-menu {
+    float: left;
+    width: 1200px;
+    padding: 20px 0 30px 0;
+}
+
+.footer-menu > ul > li {
+    display: inline-block;
+    float: left;
+    width: 110px;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+
+.footer-menu > ul > li > a {
+    color: aliceblue;
+}

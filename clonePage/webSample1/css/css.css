@@ -1,0 +1,132 @@
+<!-- CSS style sheet -->
+
+/* 기본적으로 모든 요소들은 margin과 padding이 어느정도 먹어있다. */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* ul, li는 기본적으로 왼쪽에 똥그라미가 붙는다. (목록이기 떄문) */
+/* 똥그라미를 없애주는게 list-style이다. */
+ul, li{
+    list-style: none;
+}
+
+#wrap{
+    /*width: 1200px;*/
+    /*height: 200px;*/
+    /* 한줄을 다 쓰겠다는 뜻 100% */
+    width: 100%;
+    color: aliceblue;
+}
+/* 해상도 1920 * 1080
+    웹사이트를 만들때 제일 만들기 좋은(?) 픽셀
+    원래는 1004px(width)로 작업을 했는데,
+    이제는 1200 기준으로도 작업을 한다. (대표적으로 네이버)
+    네이버를 보니까 1130을 기준으로 잡더라.
+    이제는 대부분 1200일거고, 적으면 800정도 될거다.
+    800을 쓰는 이유: 양 옆에 100px씩 뺴서 만드려고.
+*/
+
+#header {
+    /*width: 100px;*/
+    /*height: 100px;*/
+    /* wrap에 적어놨던 width와 height를 header로 옮겨왔다. */
+    width: 1200px;
+    height: 100px;
+    background: blanchedalmond;
+    /* 위아래는 0으로 margin을 주고 양 옆은 auto로 맞추도록 도와주는 착한 친구다 */
+    margin: 0 auto;
+    /*padding: 20px 0 0 0;*/
+    box-sizing: border-box;
+}
+
+#logo {
+    /* inline인데 block처럼 높이와 넓이를 넣을 수 있게끔 하는 속성값 */
+    display: inline-block;
+    /* menu 요소에 float를 적용했으니, logo에도 적용. */
+    float: left;
+}
+
+/* float 중요쓰 */
+/* div를 정렬할때 도움을 준다. 오른쪽으로 보내거나 왼쪽으로 보내거나. */
+/* 정렬을 할때 block 속성을 유지한채 강제로 보내주는 역할이다. 굳이 이해하려 하지말자. */
+
+#menu {
+    color: blanchedalmond;
+    /* display: inline-block; */
+    /* float는 내 위에 옆에 있는 요소들도 영향을 받는다. 해결방법 : 둘다 left를 준다. */
+    /* logo가 붙어있었으므로 logo에도 left를 부여하자 */
+    /* float: left; */
+    float: right;
+    /* 웹구현을 확인해 보니, menu 리스트가 떨어져있었다. 개발자도구로 확인해 보니 padding이 40잡혀있었다. */
+    padding: 0;
+}
+
+#menu > li {
+    /* inline-block은 요소마다 빈 공간이 생긴다. */
+    /* display: inline-block; */
+    float: left;
+}
+
+#menu > li > a {
+    /* a태그 내용 밑에 그어져 있는 밑줄을 안보이게 한다. */
+    text-decoration: none;
+    color: #004385;
+    font-weight: bold;
+    /* a태그는 블럭형태로 바꾸거나 인라인 블록으로 바꿔줘야 크기조절이 가능하다. */
+    display: inline-block;
+    width: 180px;
+    /* 내 현재 영역에서 부터 정렬을 정할 수 있다. */
+    text-align: center;
+    padding: 20px 0 40px 0;
+}
+
+#visual {
+    width: 100%;
+}
+
+#visual > img {
+    display: block;
+    margin: 0 auto;
+}
+
+#visual > #visual_menu {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    z-index: 2;
+    bottom: 50px;
+    /* 배경의 투명도까지 조절 가능 */
+    background: rgb(0,0,0,0.5);
+    /* 전체의 투명도 조절 */
+    /* opacity: 0.5; */
+    margin: 0 auto;
+}
+
+#visual > #visual_menu {
+    width: 1920px;
+    height: 50px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#visual > #visual_menu > ul > li {
+    float: left;
+}
+
+#visual > #visual_menu > ul > li > a{
+    color: #fff;
+    opacity: 0.7;
+    display: inline-block;
+    padding: 10px 14px;
+}
+
+#visual > #visual_menu > ul > li > a.on {
+    opacity: 1;
+    background: black;
+}
+
+#visual > #visual_menu > ul > li > a:hover {
+    opacity: 0.3;
+}

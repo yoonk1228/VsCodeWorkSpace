@@ -1,0 +1,44 @@
+/* CSS style sheet */
+
+/* * {
+    font-size: small;
+} */
+
+* {
+    font-size: 36px;
+}
+
+/* body에는 기본으로 margin 8 이 들어가 있다. */
+body{
+    margin: 0;
+}
+
+#header{
+    background-color: red;
+    height:120px;
+    /* 
+    margin-bottom: 5px;
+    margin-top: 15px; 
+    margin 속성 하나로 4방향 설정 가능
+    12시 3시 6시 9시;
+    2방향 설정은 위아래, 왼오른
+    ex) margin: 15px 0; 
+    margin 에 픽셀 하나만 적으면 4방향 모두 적용
+    */
+    /* margin: 15px 0 15px 0; */
+    /* margin: 10px 5px; */
+
+    padding:15px;
+    box-sizing: border-box;
+}
+
+#visual{
+    background-color: blue;
+    height:450px;
+}
+
+#content{
+    background-color: yellow;
+    height:300px;
+}
+
