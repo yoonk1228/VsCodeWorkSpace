@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        // 문자열 관련 메소드
+        // 글자를 자르거나 합치거나 특정부분 만든다거나
+
+        let str = "010-8955-7722"
+        console.log(typeof str) // string
+        console.log(str.length) // 13
+        console.log(str)
+        // 쩜은 객체 .length
+
+        let str2 = new String("010-8955-7722") // { } 객체 형태로 저장
+        console.log(typeof str2) // string도 결국 객체다
+        console.log(str2.length) // 13
+        console.log(str2[0]) // 0
+        console.log(str2)
+        // 배열도 key값으로 하나하나 확인가능하다.
+
+        // split, replace, concat, valueOf, replaceAll, repeat, includes, indexOf, substring, substr
+        // 객체의 속성을 활용하는 것처럼 사용
+
+        // str2.split
+        // string.split(separator,limit)
+        // [] 로 반환 해준다는 return이 담겨있다.
+        str2.split("-",2) // 특정기준으로 자를 때 사용한다.
+        // 변수에 담아서 사용할수 있다. // return []
+        let arr = str2.split("-")
+        console.log(str2.split("-"))
+
+        console.log(str2.length); // 13
+        console.log(arr.length); // 3
+
+        // repeat
+        let str3 = "*"
+        str3.repeat(6) // 대부분의 메소드는 return이 존재하고, 데이터타입을 변형할수 있다.
+        console.log(str3.repeat(6)) // ******
+
+        // javascript => ES6
+        // () => { }
+        // for 반복문이 없어도 가능한 문법들이 있다.
+        // class
+        // 비구조할동문 or 구조분해할당문
+
+        // 배열에 있는 반복문 종류
+        /*
+            1. forEach
+            2. filter
+            3. map
+            4. reduce
+            5.
+        */
+
+        let newArr = [1,2,3]
+
+        for (let i=0; i<newArr.length; i++) {
+            console.log(newArr[i])
+        }
+
+        newArr.forEach(v => console.log(v))
+        console.log(newArr)
+        // newArr.forEach()
+        // callback => 함수를 넣어라
+
+/*
+        function ingoo() {
+            console.log(1)
+        }
+*/
+        newArr.forEach(ingoo) // 1, 1, 1
+        // 함수를 실행하지 않고, 함수라는 텍스트를 인자값으로 넣었다.
+        ingoo() // 1
+
+        function ingoo(value) {
+            console.log(value)
+        }
+        // newArr.forEach(ingoo)
+        // newArr의 첫번째 인자값인 1이 ingoo에 전달되고 리턴되면 그 다음 2 그다음 3
+
+        newArr.forEach(function (value){ (console.log(value)) })
+
+        // function() { } 와 () => { } 는 같다.
+        // newArr.forEach( () => { })
+        newArr.forEach( (value) => { console.log(value) })
+        newArr.forEach(value => console.log(value)) // 인자값이 하나 일때는 괄호 생략 가능
+        // 코드도 마찬가지로 한줄이면 중괄호 생략 가능
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
