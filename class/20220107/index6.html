@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+      function a1() {
+          let a = "2022-01-07"
+          let b = a.split("-")
+          // 글자를 연결하는 함수를 사용하는 경우
+          let c = stringSum(b[1],b[2])
+
+          return c
+      }
+
+      function stringSum(a,b) {
+        return a+b
+      }
+
+      console.log(a1())
+
+      // () => {}
+      ingoo()
+      function ingoo() {
+          console.log('hello world!')
+      }
+      // 코드는 함수라는 키워드부터 찾는다.
+      // 함수부터 읽고나서 코드를 위에서부터 읽기 시작한다.
+
+      // 익명함수 이름이 없다!
+      // 먼저읽지만. 바로 실행된다.
+      // 그래서 함수자체를 변수에 담아서 사용한다.
+/*
+      () => {
+
+      }
+*/
+      let abc = function () {
+          console.log('hello')
+      }
+      // 먼저읽히지만, abc라는 변수에 담았다. 보자마자 담았다!
+      console.log(abc)
+      // abc변수안에 function이 존재하는걸 확인가능
+      abc()
+
+      let abc2 = () => {
+          console.log('hello2')
+      }
+      console.log(abc2)
+      abc2()
+
+      // 익명함수를 쓸때는 애로우함수로 쓰자
+      // ok()
+      let ok = () => {
+          // return 'h3'
+          console.log('testtest')
+      }
+      ok()
+      console.log(ok)
+
+      addEventListener('click')
+      // 버튼 눌렀을때 hello world 출력하기
+      // 함수를 사용할거면, 항상 위에다가 작업을 해놓고 시작해야한다.
+    </script>
+</head>
+<body>
+
+</body>
+</html>

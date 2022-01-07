@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>객체</title>
+    <script type="text/javascript">
+        /* 객체 */
+        console.log(1==1); // true
+        console.log({}==={}); // false
+        console.log([]===[]); // false
+        // 객체를 만들때 마다 새로운 값을 부여한다.
+        // 우리 눈에 보이는건 {} {} 이지만, 안에 새로운 값이 있으므로, 같지 않다고 판단한다.
+        let a = {}
+        let b = {}
+        console.log(a===b) // false
+
+        a = {
+            name: 'ingoo'
+        }
+        // b = {
+        //     name: 'ingoo'
+        // }
+        console.log(a.name === b.name) // true
+        // 객체일때는 false였는데, 요소인 'ingoo'를 비교했을땐 true가 나왔다.
+        // 객체 안에 들어가는 요소는 '변수'로 봐도 된다.
+        // {} {} {} 객체를 비교하는 방법?
+        // pointer, 참조
+        // a b 가 있다면, b에 a의 주소값을 넣어, b를 호출시
+        // a의 주소값이 리턴되어 a의 요소(객체)를 호출하도록 한다
+
+        // 깊은 복사 (참조)
+        c = {
+            name: 'yoon'
+        }
+        d = c; // 깊은 복사 형태
+        console.log(d == c)
+
+        // 얇은 복사
+        // b에다가 a를 가지고있는 객체를 그대로 넣는거
+        console.log(a)
+        console.log(b)
+        console.log(a===b) // false
+        Object.assign(b,a); // 옛날문법
+        // (내가 보낼객체, 내가복사할영역)
+        console.log(a)
+        console.log(b)
+        console.log(a===b) // false
+
+        // 얇은 복사
+        let apple = {name:'ingoo'}
+        let banana = {}
+        console.log(apple)
+        console.log(banana)
+
+        Object.assign(banana,apple)
+
+        console.log(apple)
+        console.log(banana)
+        console.log(apple==banana) // false
+
+        // 깊은 복사
+        banana = apple
+
+        console.log(apple)
+        console.log(banana)
+        console.log(apple==banana) // true
+
+        banana.key = 180;
+        console.log(apple)
+        console.log(banana)
+        console.log(apple==banana) // true
+
+        apple.age = 33
+        console.log(apple)
+        console.log(banana) // true
+
+        // 각각 따로 데이터를 저장하려고 객체를 쓴다.
+        // js 3점표기법 = 얇은복사
+
+        // 깊은복사
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

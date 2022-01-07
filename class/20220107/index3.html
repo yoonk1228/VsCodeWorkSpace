@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>블록객체</title>
+    <script type="text/javascript">
+        // 블록 = 객체
+        const blockHeader = {
+            hash:234234234255,
+            timestamp:1641519310, // 시간이 흐른정도를 number타입으로 변환.
+            height: 717521,
+            Difficulty: 4, // 마이닝 난이도 조절
+            Nonce: 4006,
+            //transaction(거래내역) 객체안에 객체, 배열안에 객체를 넣어야하는 상황이 발생한다.
+        }
+
+        const blockBody = [
+            {
+                fee: '0.00000000 BTC',
+                Hash: 894651984324984,
+            },
+            {
+                fee: '0.00000000 BTC',
+                Hash: 894651984324984,
+            },
+            {
+                fee: '0.00000000 BTC',
+                Hash: 894651984324984,
+            }
+        ]
+
+        const blocks = {
+            blockHeader: {...blockHeader},
+            blockBody:[...blockBody]
+        }
+        console.log(blocks)
+
+        function block(hash,height) {
+            // this.hash = 234234234255;
+            this.hash = hash;
+            this.timestamp = 1641519310; // 시간이 흐른정도를 number타입으로 변환.
+            this.height = height;
+            this.Difficulty = 4; // 마이닝 난이도 조절
+            this.Nonce = 4006;
+
+            this.sum = function() {
+                console.log(this.hash + this.height)
+            }
+        }
+        // new Block() // 함수가 아닌 객체로 변환됨
+
+        class Block2 {
+            constructor(hash,height) { // 객체에 정해줄 이름
+                this.hash = hash;
+                this.timestamp = 1641519310; // 시간이 흐른정도를 number타입으로 변환.
+                this.height = height;
+                this.Difficulty = 4; // 마이닝 난이도 조절
+                this.Nonce = 4006;
+            }
+
+            sum() { //  그 객체안에 넣을 함수
+                console.log(this.hash+this.height)
+            }
+        }
+        let d = new Block2('00004',4)
+        console.log(d)
+
+        console.log(new block())
+
+        let a = new block('0000001',7); // 새로운 a라는 공간에 객체를 넣게 할당했다.
+        let b = new block('0000002',3); // 안에있는 인자값을 다르게줘서 공간에 다른 객체를 넣을수있다.
+        let c = new block('0000003',2);
+        // 틀은 그대로지만 안에있는 value값을 다르게 한다
+
+        console.log(a)
+        console.log(b)
+        console.log(c)
+
+        console.log(a===b) // false
+        console.log(b===c) // false
+        console.log(a===c) // false
+
+        let obj = {
+            name: 'ingoo',
+            getName: function () {
+                console.log(this.name) // this는 obj를 가르킨다.
+            }
+        }
+
+
+        // 객체를 좀더 쉽게 생성하는 방법
+        // 다음주부터 DOM구조 ,BOM
+        // 웹사이트 동적으로 만들기
+        // 이후 1주일짜리 개인 프로젝트
+        // 17~21일이 프로젝트 기간.
+        // NODE.JS가 24일
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

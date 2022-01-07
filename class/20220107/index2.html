@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>얇은복사, 깊은복사</title>
+    <script type="text/javascript">
+        /* 얇은 복사 */
+        // 공간을 둘로 쪼개고 a에만 내용을 넣는다.
+        // 안에있는 값만 남은 b로 넘겨준다.
+/*      let a = {name:'ingoo'}
+        let b = {}
+
+        Object.assign(b,a)
+
+        console.log(a)
+        console.log(b)
+
+        console.log(a===b) // 얇은복사
+*/
+        let a = {name:'ingoo'}
+        let b = {...a} // ... 은 a의 객체요소를 가져오겠다.
+
+        console.log(a)
+        console.log(b)
+
+        console.log(a===b)
+
+        const dupArr = [1,2,3,1,2]
+
+        // new Set() 중복값을 제거해줌. 배열형태가아닌 다른형태로
+        const set = new Set(dupArr) // 객체로 반환됨
+        console.log(set) // set
+
+        const uniqueArr = [...set] // 먼저생성 (얇은복사)
+        // ...set 객체안의 요소만 싹 가져온다.
+        console.log(uniqueArr) // array
+
+        /* let, const */
+        // 변수와 상수
+        let c = "" // 재할당된다 변수
+        const d = "" // 재할당안된다 상수
+
+        const name = "ingoo" // string 그 자체라서 불변
+        const state = {
+            name:'aa'
+        }
+        // 객체라서 불변이지만,
+        // 객체안의 속성값을 변경하는건 가능하다.
+        const arr = []
+
+        // arr = {} // 에러
+        arr.push(1)
+        console.log(arr)
+
+        console.log(name)
+        console.log(state) // name: 'aa'
+
+        // name = "ingoo2" // 에러뜸, constant라 안됨
+        // state = {a:name} // 동일에러
+
+        state.name = "yoon"
+        console.log(state) // name: 'yoon'
+
+        // 불변성 때문에 리액트에서 사용이 까다롭다.
+
+        // const a ={}
+        // const b = []
+        // 배열과 객체를 만들때는 const를 쓰자 대세니까..
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

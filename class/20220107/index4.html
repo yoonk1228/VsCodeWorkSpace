@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>this객체</title>
+    <script type="text/javascript">
+        /* this객체 */
+        // 자바스크립트가 고유하게 가지고있다.
+
+        // this // 객체다
+        // 사용하는 위치에 따라서 결과물이 달라진다.
+
+        console.log(this) // 수많은 객체를 확인할수있다.
+        // 코드를 실행해주는 브라우저가 가지고있는 객체
+
+        // this -> object 데이터 타입이 객체이다.
+        console.log(this.document)
+        console.log(this.document.URL)
+        // this안에 있는 객체들은 브라우저가 만들어줌.
+        // 브라우저가 만든 내장객체다. API
+        // this.name = "ingoo"
+        // console.log(this.name)
+        this.age = 33
+        console.log(this.age)
+
+        function aa() {
+            console.log(this.name)
+        }
+        aa()
+        aa()
+
+        // call site
+        // DOM 객체 -> this (window)
+        console.log(this === window) // true
+        console.log(window) // console.log(this)와 결과값 같음
+
+        console.log(this) // 코드안에서 브라우저가 바로 해석할수있는 공간
+        // this는 window를 가르키게 된다.
+        // 형태상 기본틀에서 this가 쓰이게되면 window를 바라보게 된다.
+        function ab() {
+            this.name = "ingoo2"
+        }
+        // 이 형태는 ab 틀에서 this가 쓰였기때문에, ab를 바라보게 된다.
+        let a = new ab() // ab함수를 객체로 변환한 키워드 : new
+        console.log(a)
+        // 함수를 객체로 만들기 위해서는 함수가 객체를 바라볼수 있어야한다. 속성값 개체를 만들기 위해서.
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

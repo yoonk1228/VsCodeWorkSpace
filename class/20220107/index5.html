@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>콜스택</title>
+    <script type="text/javascript">
+
+        /* 출력순서 맞추기 */
+        /* 콜스택 */
+        function main() { // main() 이후 쌓인다
+            fn2() // 콘솔로그 만나기전에 fn2가 먼저 실행된다
+            console.log('main') // 일단 안찍힘
+            // fn2()가 빠져나갔으므로 남은 콘솔로그 출력
+        }
+        function fn2() {
+            console.log('fn2') // 먼저찍힘
+            fn3()
+        }
+        function fn3() {
+            console.log('fn3') // 먼저 찍힘
+            fn4()
+        }
+        function fn4() {
+            fn5()
+            console.log('fn4') // 일단 안찍힘
+            // fn5()가 빠져나갔으므로 남은 콘솔로그 찍힘
+        }
+        function fn5() {
+            console.log('hello') // 먼저 찍힘
+            fn6()
+        }
+        // fn5에선 함수6이 호출됨
+        function fn6() { // 맨 위에 쌓인다.
+            console.log('hello world!') // hello world 찍고 빠져나간다. 이후로 역순
+        }
+        main() //먼저 스택이 쌓인다.
+    </script>
+</head>
+<body>
+
+</body>
+</html>
