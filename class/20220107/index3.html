@@ -30,8 +30,8 @@
         ]
 
         const blocks = {
-            blockHeader: {...blockHeader},
-            blockBody:[...blockBody]
+            blockHeader: {...blockHeader}, // { , , , , }
+            blockBody:[...blockBody] // [{}, {}, {}, {}]
         }
         console.log(blocks)
 
@@ -48,6 +48,7 @@
             }
         }
         // new Block() // 함수가 아닌 객체로 변환됨
+        console.log(new block())
 
         class Block2 {
             constructor(hash,height) { // 객체에 정해줄 이름
@@ -63,9 +64,7 @@
             }
         }
         let d = new Block2('00004',4)
-        console.log(d)
-
-        console.log(new block())
+        console.log(d) // Block2가 객체형태로 출력되었다.
 
         let a = new block('0000001',7); // 새로운 a라는 공간에 객체를 넣게 할당했다.
         let b = new block('0000002',3); // 안에있는 인자값을 다르게줘서 공간에 다른 객체를 넣을수있다.
