@@ -1,0 +1,62 @@
+/* CSS style sheet */
+
+* {
+    margin: 10px;
+}
+
+#main {
+    width: 1000px;
+    height: 700px;
+    border: 1px solid #000000;
+    margin: 0 auto;
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-area {
+    width: 800px;
+    height: 500px;
+    border: 1px solid #000000;
+    /* flex */
+    display: flex;
+    /* 삐져나오는 부분 안보이게 hidden */
+    overflow: hidden;
+}
+
+.album {
+    /* img-area 와 크기를 딱 맞춤 */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* 이미지의 width 만큼 x축을 이동시킴. */
+    /* transform: translateX(-800px); */
+    transition: all 1s;
+}
+
+.img-area > .album > img{
+    /* img-area 와 크기를 딱 맞춤 */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.btn-area {
+    width: 600px;
+    height: 60px;
+    border: 1px solid #000000;
+    /* flex */
+    display: flex;
+    justify-content: space-around;
+}
+
+/* 이미지 순서가 끝에 다다르면, 버튼 비활성화 */
+.btn-prev {
+
+}
+
+.btn-next {
+
+}
