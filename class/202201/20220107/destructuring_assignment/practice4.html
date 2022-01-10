@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>블라블라</title>
+</head>
+<body>
+  <script type="text/javascript">
+    const kim = {
+      name: 'kim',
+      age: 10,
+      addr: 'kor',
+      friends: [
+        {name: 'joe', age: 20, addr:'usa'},
+        {name: 'miko', age: 30, addr:'jp'}
+      ]
+    };
+
+    var { name: userName, friends: [ ,{ name: jpFriend }] } = kim;
+    console.log(userName); // kim
+    console.log(jpFriend); // miko
+  </script>
+</body>
+</html>
