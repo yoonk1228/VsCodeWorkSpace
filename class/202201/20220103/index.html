@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>js연습</title>
+  <script type="text/javascript">
+    /* 일단 메모리에 공간확보 (변수선언) */
+    /* 그 공간에 데이터값이 들어감 // "월요일" */
+    let 이동훈 = "월요일"
+    console.log(이동훈);
+    이동훈 = "화요일"
+    console.log(이동훈);
+    김윤재 = "수요일"
+    console.log(김윤재);
+
+    let a = "윤재"
+    /*
+    let a = "윤재쓰"
+    console.log(a)// 이미 선언되어 있다고(공간이 있다고) 오류뜸
+     */
+    /* 같은 이름의 변수선언은 못함. 그러나 */
+    {
+      let a = "윤재쓰"
+      console.log(a); // 윤재쓰;
+    } // 똑같은 변수라도, 실행되는 영역이 다르기 때문에, 실행이 된다.
+    console.log(a); // 윤재;
+    /* 변수라는건 항상 바뀐다. (내용을 항상 바꿀 수 있다.) */
+
+    /* const */
+    /* 변수값이 절대 안바뀐다. (내용을 바꿀 수 없다.) */
+    const b = "잉구"
+    // b = "잉구2" // 변수에 제한이 걸려있다고 오류가 뜸
+    console.log(b);
+
+    /* else if */
+    /* if는 조건식을 하나밖에 만들지 못한다. */
+    /* else if는 조건식을 여러개 작성할 수 있다. */
+
+    let point = 5;
+
+    if (point == 100) {
+      console.log('A')
+    } else if (point == 90) {
+      console.log("B")
+    } else if (point == 80) {
+      console.log("C")
+    } else {
+      console.log("F")
+    }
+
+    /* function */
+    // 1. 함수정의
+    // 2. 함수사용
+    // 3. return
+    // 4. 매개변수(함수를 사용할 때 어떠한 값으로 함수를 굴릴지 '정의'하는 행동)
+    // 인자( 함수를 사용할때 쓴다 )
+    // 함수명 뒤에 있는 () 안에 임의의 변수명을 적을수가 있다.
+    // 그리고 한개 이상을 넣을수도 있다.
+
+    function sum(num1,num2,num3,num4) {
+      let answer;
+      answer = num3+num4+num1+num2;
+      return answer;
+    }
+
+    let rst = sum(1,2,'hello','world')
+    console.log(rst);
+    console.log(sum(1,2,3,4));
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

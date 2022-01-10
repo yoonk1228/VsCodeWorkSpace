@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM, BOM</title>
+  <script type="text/javascript">
+      let btn2 = document.querySelector(('#btn'))
+      console.log('body Script: ', btn2) // null
+      // 버튼이라는 element가 렌더되지 않은 상태에서 가져오려고 했기 때문에 null이 찍혔다.
+  </script>
+</head>
+<body>
+<button id="btn">버튼</button>
+<script type="text/javascript">
+    let btn = document.querySelector(('#btn'))
+    console.log('body Script: ',btn) // button#btn
+    // 렌더가 된 후에 가져왔기 때문에 btn을 읽어올수 있었다.
+
+    // callback
+    // btn 내용은 html에 관련된 Object 여야만 addEventListener를 사용할 수 있다.
+    // btn.addEventListener('click',
+    // function clickBtn() {
+    //     console.log('hello world!')
+      // })
+    btn.addEventListener('click', clickBtn)
+    // click이라는 값을, 그리고 click의 실행코드를 매개변수로 가져온다.
+
+    function clickBtn() {
+        console.log('hello world!')
+    }
+
+    // addEventListener
+    // 첫번째 인자값은 String으로 넣는다.
+    // - 이벤트 이름을 적는다.
+    // 두번째 인자값은 콜백 내용을 넣는다.
+
+    // callback
+    // obj라는 객체를 만들어서 sum이라는 key값에 aa함수를 넣어주세요.
+
+    let obj = {
+        sum:aa, // 실행은 하지않고, 코드만 들어간 상태 (객체로)
+    };
+    console.log('obj : ', obj.sum)
+
+    function aa(num1, num2) {
+        return num1+num2
+    }
+    aa(1,2)
+
+    console.log(obj.sum()) // NaN
+
+    console.log(aa) // function aa() {....
+    // 함수를 정의했던 코드가 나온다.
+
+    // 함수를 정의하고 함수를 호출하려고할때 뒤에 ()를 쓰지않으면 함수를 정의한 코드만 나온다.
+    // () 영역은 함수를 실행시켜주는 아이다.
+    // 함수는 어딘가에 담아서 사용이 가능하다.
+
+    let yoon = aa
+    console.log('yoon : ',yoon) // function aa () { ....
+    console.log('yoon() : ',yoon()) // NaN
+
+    // 함수자체를 쓰지않고 어딘가에 담아만 놓고 싶을때 쓴다.
+
+</script>
+</body>
+</html>

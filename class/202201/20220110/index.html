@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM, BOM</title>
+  <script type="text/javascript">
+    /* DOM, BOM */
+    // D: document, B: browser
+    console.log(this)
+    // document 객체는 window객체 안에 들어있다.
+    // javascript로 브라우저를 조작하기 위해서 사용
+    // html을 추가한다거나, 엘리먼트를 초가한다거나, css조작까지 가능
+  </script>
+</head>
+<body>
+  <button id="btn">버튼</button>
+  <script type="text/javascript">
+    let mainBtn = document.getElementById('btn')
+    console.log(typeof mainBtn) // object
+    // document(객체)
+    // querySelector
+    // html body 안에 있는 내용을 객체로 반환해서 가져온다.
+    // getElementById
+    console.log(mainBtn) // 내가 얘를 (mainBtn) 확실히 찾아서 보여줄 수 있는 상태다.
+
+    // null : 아무것도 없을때 넣는 값, undefined: 찾을수 없는 값
+
+    mainBtn.addEventListener('click', function () {
+      console.log('hello world')
+    })
+
+    // $('#btn')
+    // function $(element) {
+    //     document.getElementById(element)
+    // }
+    // $('#menu > ul > li > a')
+    // 위의 것을 사용 하지 않기 위해 querySelector를 만들었다.
+
+    //    1. 내가 원하는 element를 가져와서 조작할 줄 알아야 한다.
+    //    2. 가져온 element의 데이터타입은 object이다.
+
+</script>
+</body>
+</html>

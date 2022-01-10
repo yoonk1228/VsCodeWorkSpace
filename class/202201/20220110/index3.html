@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>콜백</title>
+</head>
+<body>
+<script type="text/javascript">
+    /* callback */
+    // 2가지 유형
+    // 동기와 비동기식
+    // 매개변수에 함수가 들어오는 경우를 callback이라고 한다.
+    // 인자값에 함수를 집어 넣을수있다. -> 함수코드를 넣을수있다.
+
+    function abc(param) {
+        console.log('함수 안에서 실행: ',param)
+        param() // 21번째 줄 console.log 실행
+        // test함수 인자를 매개변수로 받아서 () 넣어주었더니, 그 함수코드가 실행되었다.
+    }
+
+    function test() {
+        console.log('hello world!')
+    }
+
+    abc(test) // abc를 실행하되, test함수의 코드내용을 받아서 실행했다.
+
+    function callback2(type,param) { // type이라는 매개변수에 console이 전달되고, param에 test가 전달됨.
+        if (type === "console") {
+            param()
+            // param은 test함수코드를 담고있었으므로,
+            // param() 은 test() 가 된다.
+            // 즉 test()가 실행된다.
+        } else {
+            console.log()
+        }
+    }
+
+    callback2('console',test)
+
+    let elementObj = {
+        addEventListener: callback2,
+    }
+
+    elementObj.addEventListener('console',test)
+
+    elementObj.addEventListener('console',function () {console.log('익명함수')})
+
+    elementObj.addEventListener('console', () => console.log('익명함수를 화살표함수로 작성'))
+
+    elementObj.addEventListener('console', _ => console.log('익명함수를 화살표함수로 작성하는데 매개변수를 _로 써서 받은척함'))
+
+
+</script>
+</body>
+</html>
