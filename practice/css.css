@@ -1,0 +1,76 @@
+/* CSS style sheet */
+
+/*ul {*/
+/*    list-style: none;*/
+/*}*/
+
+#content {
+    width: 600px;
+    border: 1px solid #323232;
+    margin: 0 auto;
+    /* flex */
+    display: flex;
+    flex-direction: column;
+}
+
+#content > h1 {
+    padding-left: 30px;
+}
+
+#content > form {
+    /* flex */
+    display: flex;
+    justify-content: center;
+}
+
+#content > form > .con-input {
+    width: 70%;
+    height: 40px;
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+#content > form > .btn-reset {
+    width: 13%;
+    text-align: center;
+    font-size: 14px;
+}
+
+#content > form > .btn-submit {
+    width: 10%;
+    margin: 0 5px 0 5px;
+    font-size: 14px;
+}
+
+#content > #todoList {
+    /*width: 20%;*/
+    margin-top: 30px;
+    padding: 0 20px 0 20px;
+    /* flex */
+
+}
+
+#todoList > li {
+    font-size: 24px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #8e8e8e;
+    /* flex */
+    display: flex;
+    justify-content: space-between;
+}
+
+#todoList > li > .span1 {
+    /* flex */
+    align-self: end;
+}
+
+#todoList > li > .span2 {
+    font-size: 36px;
+    cursor: pointer;
+    /* flex */
+    align-self: end;
+}
+
+#todoList > li > .span2:hover {
+    cursor: pointer;
+}
