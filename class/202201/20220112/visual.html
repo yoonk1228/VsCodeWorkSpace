@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    ul,li {
+        list-style: none;
+    }
+    #visual {
+        width: 100%;
+        height: 300px;
+        position: relative;
+    }
+    #visual > li {
+        position: absolute;
+        height: 300px;
+        width: 100%;
+        /*display: none;*/
+        left: 100%;
+        transition: all 0.5s;
+        /*opacity: 0;*/
+        /*background: rgba(0,0,0,0);*/
+        /*transition: all 0.35s;*/
+    }
+    #visual > li.on {
+        /*opacity: 1;*/
+        /*display: block;*/
+        left: 0;
+    }
+    #visual > li:nth-child(1) { background: red;}
+    #visual > li:nth-child(2) { background: blue;}
+    #visual > li:nth-child(3) { background: silver; }
+    #visual > li:nth-child(4) { background: green;}
+  </style>
+</head>
+<body>
+  <ul id="visual">
+    <!-- on이라는 클래스가 들어오면 그 요소만 보이도록 하고 싶다. -->
+    <li>a</li>
+    <li>b</li>
+    <li>c</li>
+    <li>d</li>
+  </ul>
+  <button id="slideBtn" onclick="clickHandler(1)">레드버튼1</button>
+  <button id="slideBtn" onclick="clickHandler(2)">블루버튼2</button>
+  <button id="slideBtn" onclick="clickHandler(3)">그레이버튼3</button>
+  <button id="slideBtn" onclick="clickHandler(4)">그린버튼4</button>
+  <script type="text/javascript">
+    // DOM 조작
+    // querySelectorAll
+    // 값들을 배열에 담아서 선택
+    let bannerImgs = document.querySelectorAll('#visual > li')
+    console.log(bannerImgs) // [liElement, liElement, liElement, liElement]
+    // bannerImgs[2].setAttribute('class','on')
+
+    let i = 0;
+    let interval = setInterval(banner,3000)
+    banner()
+
+    function banner(n) {
+      if (i === 4) {
+        i = 0
+      }
+
+      if (n === undefined) { // setInterval로 실행할 경우
+      } else { // 직접 실행할 경우
+        i = n-1
+      }
+      console.log(n)
+      // bannerImgs[i].setAttribute('class','on')
+
+      for (let j=0; j<bannerImgs.length; j++) {
+        if (i === j) {
+          bannerImgs[i].setAttribute('class','on')
+          console.log(bannerImgs[i])
+        } else {
+          bannerImgs[j].setAttribute('class','')
+          console.log(bannerImgs[j])
+        }
+      }
+      i++
+    }
+    clearInterval() // 설정된 녀석을 지우는 역할을 하는 함수 인자값. 인자에 setInterval의 키값을 넣어준다.
+    console.log(interval) // setInterval의 키값
+    // let btn = document.querySelector('#slideBtn')
+    // btn.addEventListener('click',clickHandler)
+
+    function clickHandler(n) {
+      window.alert(n+'에서 멈춰!')
+      clearInterval(interval)
+      banner(n) // 버튼을 클릭했을땐 인자번호의 요소를 출력
+      interval = setInterval(banner,3000)
+    }
+  </script>
+</body>
+</html>
