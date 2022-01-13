@@ -1,0 +1,67 @@
+/* CSS style sheet */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul,li{list-style: none}
+
+#mask {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: red;
+    overflow: hidden;
+}
+
+#visual {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    /*overflow: hidden;*/
+}
+
+#visual > li {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+}
+
+#visual > li:nth-child(1) {
+    /*left: -50px;*/
+    background: blue;
+}
+#visual > li:nth-child(2) {
+    left: 300px;
+    background: green;
+}
+#visual > li:nth-child(3) {
+    left: 600px;
+    background: silver;
+}
+#visual > li:nth-child(4) {
+    left: 900px;
+    background: yellow;
+}
+
+/* */
+#visual.on1{}
+#visual.on2{}
+#visual.on3{}
+#visual.on4{}
+
+
+/**/
+#visual > li:nth-child(1).on {
+    left: 0;
+}
+#visual > li:nth-child(2).on{
+    left: -300px;
+}
+#visual > li:nth-child(3).on{
+    left: -600px;
+}
+#visual > li:nth-child(4).on{
+    left: -900px;
+}

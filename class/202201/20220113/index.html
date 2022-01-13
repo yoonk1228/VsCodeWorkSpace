@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link href="css.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+  <!-- 다음 이전 버튼 -->
+  <div id="mask">
+    <ul id="visual">
+      <li>a</li>
+      <li>b</li>
+      <li>c</li>
+      <li>d</li>
+    </ul>
+    <!-- 번호의 n번째로 이동시켜버리기 -->
+  </div>
+  <script type="text/javascript">
+    let index = 0;
+    let interval = setInterval(banner,1000)
+
+    function banner(n) {
+      if (index === 4) index = 0
+      if (n !== undefined) index = n-1
+
+      console.log(index,n)
+
+      index ++
+    }
+    interval = 12
+    // clearInterval(interval)
+  </script>
+</body>
+</html>

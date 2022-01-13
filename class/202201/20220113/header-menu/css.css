@@ -1,0 +1,69 @@
+/*  */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,li{list-style: none;}
+a{text-decoration: none;}
+
+#wrap{ width: 100%;}
+
+#header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding: 0 30px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e1e1e1;
+    /* css flex */
+    display: flex;
+    justify-content: space-between;
+}
+
+#header > h1 {
+    padding: 20px 0;
+}
+
+#header > #gnb {
+    width: 1200px;
+    /* css flex */
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 30px;
+}
+/* 가상선택자 */
+/* 자식요소에다가 영역을 생성해준다. */
+/* content가 없으면 실행이 안된다. */
+/* after: 뒤에, before: 앞에 */
+#header > #gnb::before {
+    content:'';
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    height: 180px;
+    /* on이 붙으면 높이가 180px*/
+    border-bottom: 1px solid #e1e1e1;
+    /* 그림자 */
+    box-shadow: 0 10px 10px 0 rgb(48 49 51 / 6%);
+}
+
+#header > #gnb.on::before {
+    display: block;
+}
+
+#header > #gnb > li .snb {
+    position: absolute;
+    top: 95px;
+    /* 드랍메뉴 확인하기 */
+    display: none;
+    /*display: block;*/
+}
+
+/* 처음거빼고 이어지는 li 처음제외하고 다른거에 마진을 주고싶을때. */
+#header > #gnb > li > .snb > ul > li+li {
+    margin-top: 20px;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>headerMenu</title>
+  <link href="css.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+  <div id="wrap">
+    <div id="header">
+      <h1>
+        <a href="#">logo</a>
+      </h1>
+      <ul id="gnb" class="">
+        <li>
+          <li><a href="#">menu1</a>
+          <div class="snb">
+            <ul>
+              <li>menu1-1</li>
+              <li>menu1-2</li>
+              <li>menu1-3</li>
+              <li>menu1-4</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+        <li><a href="#">menu2</a>
+          <div class="snb">
+            <ul>
+              <li>menu2-1</li>
+              <li>menu2-2</li>
+              <li>menu2-3</li>
+              <li>menu2-4</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+        <li><a href="#">menu3</a>
+          <div class="snb">
+            <ul>
+              <li>menu3-1</li>
+              <li>menu3-2</li>
+              <li>menu3-3</li>
+              <li>menu3-4</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+        <li><a href="#">menu4</a>
+          <div class="snb">
+            <ul>
+              <li>menu4-1</li>
+              <li>menu4-2</li>
+              <li>menu4-3</li>
+              <li>menu4-4</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <ul id="util">
+        <li><a href="#">login</a></li>
+        <li><a href="#">join</a></li>
+      </ul>
+    </div>
+  </div>
+  <script type="text/javascript">
+    let gnb = document.querySelector('#gnb > li')
+    let gnbElement = document.querySelector('#gnb')
+
+    for (let i=0; i<gnb.length; i++) {
+      gnb[i].addEventListener('mouseover', () => {
+        gnbElement.classList.add('on')
+      })
+    }
+
+    /* 영역을 나갔을때 on을 지우는것. */
+    let header = document.querySelector('#header')
+    header.addEventListener('mouseout', (e) => {
+      console.log(e.target.id)
+      if (e.target.id === 'gnb') {
+        gnb.classList.remove('on')
+      }
+    })
+  </script>
+</body>
+</html>
