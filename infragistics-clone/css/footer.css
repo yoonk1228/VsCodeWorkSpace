@@ -1,0 +1,76 @@
+/* CSS style sheet */
+
+#top-footer {
+    max-width: 1200px;
+    color: aliceblue;
+    margin: 0 auto;
+}
+
+#top-footer > .footer-wrap-icons {
+    /*max-width: 1200px;*/
+    /* css flex */
+    display: flex;
+}
+
+#top-footer > .footer-wrap-icons > a {
+    width: 64px;
+    height: 64px;
+}
+
+#top-footer > .footer-wrap-icons > a > object{
+    width: 64px;
+    height: 64px;
+}
+
+#top-footer > .footer-wrap-link-news {
+    width: 100%;
+    letter-spacing: -1px;
+    /* css flex */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#top-footer > .footer-wrap-link-news > .footer-menu-block {
+    width: 68.75%;
+    order: 0;
+    box-sizing: border-box;
+    /* css flex */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#top-footer > .footer-wrap-link-news > .footer-menu-block > .footer-ui {
+    /* css flex */
+    display: flex;
+    flex-direction: row;
+}
+
+#top-footer > .footer-wrap-link-news > .footer-menu-block > .footer-ui > .menu-list {
+    margin-left: 40px;
+}
+
+#top-footer > .footer-wrap-link-news > .footer-news-block {
+    width: 23%;
+    order: 1;
+    box-sizing: border-box;
+    margin-left: 2.5%;
+    padding-left: 2.5%;
+    border-left: 1px solid aliceblue;
+}
+
+#top-footer > .footer-wrap-link-news > .footer-news-block > .newsLetter > .newsLetter-header {
+    /* css flex */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.newsLetter-text-h5 {
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+.footer-legal {
+
+}
