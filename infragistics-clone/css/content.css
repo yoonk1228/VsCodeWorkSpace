@@ -1,0 +1,14 @@
+/* CSS style sheet*/
+
+/* 가운데 컨텐츠영역 */
+#content {
+    width: 100%;
+    max-width: 1200px;
+    height: 500px;
+    margin: 0 auto;
+    background: #a7a7a7;
+    /* css flex */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

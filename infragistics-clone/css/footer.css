@@ -1,25 +1,39 @@
 /* CSS style sheet */
 
+/* footer 상단 (덜 검정배경) */
 #top-footer {
+    width: 100%;
     max-width: 1200px;
-    color: aliceblue;
     margin: 0 auto;
+    /*height: 422px;*/
+    color: aliceblue;
+    padding: 50px 0 50px 0;
+    background-color: #111111;
+    /* css flex */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #top-footer > .footer-wrap-icons {
-    /*max-width: 1200px;*/
+    max-width: 1200px;
+    margin: 0 20px 30px 20px;
     /* css flex */
     display: flex;
 }
 
 #top-footer > .footer-wrap-icons > a {
-    width: 64px;
-    height: 64px;
+    width: 35px;
+    height: 35px;
+    padding: 0 20px 0 20px;
 }
 
 #top-footer > .footer-wrap-icons > a > object{
-    width: 64px;
-    height: 64px;
+    position: relative;
+    width: 35px;
+    height: 35px;
+    padding: 0 20px 0 20px;
 }
 
 #top-footer > .footer-wrap-link-news {
@@ -78,16 +92,67 @@
     font-weight: bold;
 }
 
+.newsLetter-sign-btn {
+    border: 1px solid #0099ff;
+    background: #0099ff;
+    color: #fff;
+    padding: 0.75em 1.25em;
+    font-size: 0.8em;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all .4s;
+    cursor: pointer;
+}
+
 #top-footer > .footer-wrap-legal {
     width: 100%;
     max-width: 980px;
+    margin-top: 10px;
     /* css flex */
     display: flex;
     justify-content: center;
 }
 
-#top-footer > .footer-wrap-legal > .footer-ui > .footer-menu-list{
+#top-footer > .footer-wrap-legal > .footer-ui > .footer-menu-list {
     /* css flex */
     display: flex;
     flex-direction: row;
+}
+
+#top-footer > .footer-wrap-legal > .footer-ui > .footer-menu-list > li:nth-child(2) {
+    margin: 0 20px 0 20px;
+}
+
+#top-footer > .footer-wrap-legal > .footer-ui > .footer-menu-list > li > a {
+    color: #a7a7a7;
+    font-size: 0.8em !important;
+}
+
+#top-footer > .footer-wrap-legal > .footer-ui > .footer-menu-list > li > span {
+    color: #ffffff66;
+    font-size: 10px;
+}
+
+/* footer 하단 (완전 검정 배경)*/
+#bottom-footer {
+    width: 100%;
+    padding: 25px 10px 25px 10px;
+    background-color: #000000;
+    text-align: center;
+    /* css flex */
+    display: flex;
+}
+
+#bottom-footer > #bottom-footer-wrap {
+    max-width: 1200px;
+    padding: 0px 10px;
+    /*position: relative;*/
+    margin: 0 auto;
+    /*box-sizing: border-box;*/
+}
+
+#bottom-footer > #bottom-footer-wrap > span {
+    font-size: 14px;
+    text-align: center;
+    color: #868686;
 }

@@ -1,0 +1,12 @@
+/* CSS style sheet*/
+
+/* 페이지 최상단 헤더영역 */
+#header {
+    max-width: 1200px;
+    height: 70px;
+    margin: 0 auto;
+    /* css flex */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
