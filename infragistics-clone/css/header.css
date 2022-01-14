@@ -2,6 +2,7 @@
 
 /* 페이지 최상단 헤더영역 */
 #header {
+    /*width: 100%;*/
     max-width: 1200px;
     height: 70px;
     margin: 0 auto;
@@ -9,6 +10,7 @@
 
 #header > .globalnav-wrap {
     width: 100%;
+    /*max-width: 1200px;*/
     margin-top: 10px;
     /* css flex */
     display: flex;
@@ -17,6 +19,7 @@
 
 #header > .globalnav-menu-wrap {
     width: 100%;
+    /*max-width: 1200px;*/
     /* css flex */
     display: flex;
     justify-content: space-between;
