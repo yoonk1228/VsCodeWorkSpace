@@ -5,8 +5,96 @@
     max-width: 1200px;
     height: 70px;
     margin: 0 auto;
+}
+
+#header > .globalnav-wrap {
+    width: 100%;
+    margin-top: 10px;
     /* css flex */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
 }
+
+#header > .globalnav-menu-wrap {
+    width: 100%;
+    /* css flex */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header > .globalnav-wrap > .globalnav-section {
+    font-size: 14px;
+    /* css flex */
+    display: flex;
+    justify-content: right;
+}
+
+#header > .globalnav-menu-wrap > .globalnav-brand {
+    width: 100%;
+    max-width: 200px;
+    margin: 8px 0;
+}
+
+#header > .globalnav-menu-wrap > .globalnav-menu-container {
+    margin-left: 100px;
+}
+
+.navigation-main {
+    font-size: 0.8em;
+    /* css flex */
+    display: flex;
+    flex-direction: row;
+}
+
+.navigation-main > li {
+    padding: 5px 13px 5px 13px;
+}
+
+.navigation-main > li > a {
+    color: #868686;
+}
+
+.navigation-main > li > a:hover {
+    color: #0099ff;
+}
+
+.navigation-main > li > a:after {
+    border-top: 1px solid #666;
+    border-left: 1px solid #666;
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    /*margin-top: -15px;*/
+    margin-left: 7px;
+    margin-bottom: 4px;
+    /*position: absolute;*/
+    top: 40%;
+    right: 0.5em;
+    transform: rotate(-135deg) translateY(-40%);
+}
+
+/* Free Trials만 꾸밈태그 안보임 */
+.navigation-main > li:nth-child(6) > a:after {
+    display: none;
+}
+
+#header > .globalnav-wrap > .globalnav-section > .globalnav-menu-container > .navigation {
+    /* css flex */
+    display: flex;
+}
+#header > .globalnav-wrap > .globalnav-section > .globalnav-menu-container > .navigation > li {
+    padding-left: 15px;
+}
+
+.navigation {
+    font-size: 0.75rem;
+}
+
+.navigation > li:nth-child(1) {
+    color: #868686;;
+}
+
+
+

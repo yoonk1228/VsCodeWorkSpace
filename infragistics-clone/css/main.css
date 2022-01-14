@@ -7,9 +7,12 @@ a{
     text-decoration: none;
     font-weight: bold;
     transition: all .25s linear;
+    color: #21a3d4;
+    cursor: pointer;
 }
-
-/*body {font-weight: 400;}*/
+a:hover {
+    color: #0000ff;
+}
 
 /* 마우스로 드래그시 */
 ::selection {
