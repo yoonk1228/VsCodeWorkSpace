@@ -1,0 +1,108 @@
+/**/
+
+#header {
+
+}
+
+#header > #gnb {
+    display: none;
+}
+
+#content {
+    display: block;
+}
+
+#content > li {
+    width: 100%;
+}
+
+#sidebar_container {
+    display: block;
+}
+
+#side_flag {
+    display: none;
+}
+
+#side_flag + label {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#side_flag + label > span {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #000;
+    transition: all 0.35s;
+}
+
+#side_flag + label > span:nth-child(1) {
+    top: 0
+}
+
+#side_flag + label > span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#side_flag + label > span:nth-child(3) {
+    bottom: 0;
+}
+
+/**/
+#side_flag:checked + label > span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+#side_flag:checked + label > span:nth-child(2) {
+    opacity: 0;
+}
+
+#side_flag:checked + label > span:nth-child(3) {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+}
+
+#side_flag + label + #sidebar {
+    /* 메뉴 정렬부터 해놓자 */
+    /*display: none;*/
+    width: 200px;
+    right: -200px;
+    /* x가 움직이는걸 해소 */
+    position: absolute;
+    z-index: 9;
+    /* vh,vw */
+    /* 너가 가지고 있는 브라우저의 넓이만큼 채워줘 */
+    /* 부모가 아니라, 브라우저의 크기 넓이를 참조한다. */
+    /*
+        visual 부분이 모바일과 pc두개에서 차이가 난다. 근데, 그걸가지고 브라우저에 그대로 옮기면
+        뭔가 이상하다. 그래서 30vh정도 줘가지고 간격을 조절해가지고 처리를 많이한다.
+    */
+    height: 100vh;
+    /* 헤더의 크기만큼 (100%) */
+    /* height: 100%;*/
+    background: #fff;
+    padding-top: 20px;
+    transition: all 0.35s;
+}
+
+#side_flag:checked + label + #sidebar {
+    right: 0;
+}
+
+#side_flag + label + #sidebar > ul {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    box-sizing: border-box;
+}
+
+#side_flag + label + #sidebar > ul > li + li {
+    margin-top: 20px;
+}

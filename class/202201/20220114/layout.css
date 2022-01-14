@@ -1,0 +1,65 @@
+/* CSS style sheet */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,li {list-style: none;}
+a {text-decoration: none;}
+
+#wrap{width: 100%}
+
+#header {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    padding: 30px 20px;
+    border-bottom: 1px solid #e1e1e1;
+    align-items: center;
+    z-index: 10;
+}
+
+#header ul {
+    display: flex;
+}
+
+#header > #gnb {
+    width: 1200px;
+    justify-content: space-evenly;
+}
+
+#visual {
+    /*height: 500px;*/
+    /* header를 10vh 주면, 한 화면에 정확히 100% 보여줄수 있다. */
+    height: 90vh;
+    width: 100%;
+    background: red;
+}
+
+#content {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#content > li {
+    width: 33%;
+    background: #e1e1e1;
+    height: 300px;
+}
+/* media query */
+@media screen and (max-width: 760px) {
+    #header > #gnb {
+        display: none;
+    }
+
+    #content {
+        display: block;
+    }
+
+    #content > li {
+        width: 100%;
+    }
+}
+/* hambuger버튼을 pc에선 안 보이게하고, 모바일에선 보이게하면 좋다. (반응성) */
