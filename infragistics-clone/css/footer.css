@@ -1,42 +1,47 @@
 /* CSS style sheet */
 
+#footer-wrap {
+    background-color: #111111;
+}
+
 /* footer 상단 (덜 검정배경) */
-#top-footer {
+#footer-wrap > #top-footer {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     /*height: 422px;*/
     color: aliceblue;
     padding: 50px 0 50px 0;
-    background-color: #111111;
+    background: transparent;
     /* css flex */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    z-index:5;
 }
 
-#top-footer > .footer-wrap-icons {
+#footer-wrap > #top-footer > .footer-wrap-icons {
     max-width: 1200px;
     margin: 0 20px 30px 20px;
     /* css flex */
     display: flex;
 }
 
-#top-footer > .footer-wrap-icons > a {
+#footer-wrap > #top-footer > .footer-wrap-icons > a {
     width: 35px;
     height: 35px;
     padding: 0 20px 0 20px;
 }
 
-#top-footer > .footer-wrap-icons > a > object{
+#footer-wrap > #top-footer > .footer-wrap-icons > a > object{
     position: relative;
     width: 35px;
     height: 35px;
     padding: 0 20px 0 20px;
 }
 
-#top-footer > .footer-wrap-link-news {
+#footer-wrap > #top-footer > .footer-wrap-link-news {
     width: 100%;
     letter-spacing: -1px;
     /* css flex */
@@ -45,7 +50,7 @@
     flex-wrap: wrap;
 }
 
-#top-footer > .footer-wrap-link-news > .footer-menu-block {
+#footer-wrap > #top-footer > .footer-wrap-link-news > .footer-menu-block {
     width: 68.75%;
     order: 0;
     box-sizing: border-box;
@@ -54,24 +59,24 @@
     justify-content: space-evenly;
 }
 
-#top-footer > .footer-wrap-link-news > .footer-menu-block > .footer-ui {
+#footer-wrap > #top-footer > .footer-wrap-link-news > .footer-menu-block > .footer-ui {
     /* css flex */
     display: flex;
     flex-direction: row;
 }
 
-#top-footer > .footer-wrap-link-news > .footer-menu-block > .footer-ui > .footer-menu-list li, .category {
+#footer-wrap > #top-footer > .footer-wrap-link-news > .footer-menu-block > .footer-ui > .footer-menu-list li, .category {
     line-height: 1.2em;
     position: relative;
     margin-bottom: 15px;
     margin-right: 20px;
 }
 
-#top-footer > .footer-wrap-link-news > .footer-menu-block > .footer-ui > .footer-menu-list li > ul {
+#footer-wrap > #top-footer > .footer-wrap-link-news > .footer-menu-block > .footer-ui > .footer-menu-list li > ul {
     color: #a7a7a7;
 }
 
-#top-footer > .footer-wrap-link-news > .footer-news-block {
+#footer-wrap > #top-footer > .footer-wrap-link-news > .footer-news-block {
     width: 23%;
     order: 1;
     box-sizing: border-box;
@@ -80,7 +85,7 @@
     border-left: 1px solid aliceblue;
 }
 
-#top-footer > .footer-wrap-link-news > .footer-news-block > .newsLetter > .newsLetter-header {
+#footer-wrap > #top-footer > .footer-wrap-link-news > .footer-news-block > .newsLetter > .newsLetter-header {
     /* css flex */
     display: flex;
     align-items: center;
@@ -104,7 +109,7 @@
     cursor: pointer;
 }
 
-#top-footer > .footer-wrap-legal {
+#footer-wrap > #top-footer > .footer-wrap-legal {
     width: 100%;
     max-width: 980px;
     margin-top: 10px;
@@ -113,28 +118,28 @@
     justify-content: center;
 }
 
-#top-footer > .footer-wrap-legal > .footer-ui > .footer-menu-list {
+#footer-wrap > #top-footer > .footer-wrap-legal > .footer-ui > .footer-menu-list {
     /* css flex */
     display: flex;
     flex-direction: row;
 }
 
-#top-footer > .footer-wrap-legal > .footer-ui > .footer-menu-list > li:nth-child(2) {
+#footer-wrap > #top-footer > .footer-wrap-legal > .footer-ui > .footer-menu-list > li:nth-child(2) {
     margin: 0 20px 0 20px;
 }
 
-#top-footer > .footer-wrap-legal > .footer-ui > .footer-menu-list > li > a {
+#footer-wrap > #top-footer > .footer-wrap-legal > .footer-ui > .footer-menu-list > li > a {
     color: #a7a7a7;
     font-size: 0.8em !important;
 }
 
-#top-footer > .footer-wrap-legal > .footer-ui > .footer-menu-list > li > span {
+#footer-wrap > #top-footer > .footer-wrap-legal > .footer-ui > .footer-menu-list > li > span {
     color: #ffffff66;
     font-size: 10px;
 }
 
 /* footer 하단 (완전 검정 배경)*/
-#bottom-footer {
+#footer-wrap > #bottom-footer {
     width: 100%;
     padding: 25px 10px 25px 10px;
     background-color: #000000;
@@ -143,15 +148,15 @@
     display: flex;
 }
 
-#bottom-footer > #bottom-footer-wrap {
+#footer-wrap > #bottom-footer > #bottom-footer-wrap {
     max-width: 1200px;
-    padding: 0px 10px;
+    padding: 0 10px;
     /*position: relative;*/
     margin: 0 auto;
     /*box-sizing: border-box;*/
 }
 
-#bottom-footer > #bottom-footer-wrap > span {
+#footer-wrap > #bottom-footer > #bottom-footer-wrap > span {
     font-size: 14px;
     text-align: center;
     color: #868686;
