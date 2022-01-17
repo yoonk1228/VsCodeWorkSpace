@@ -6,28 +6,81 @@
     /*max-width: 1200px;*/
     /*height: 800px;*/
     margin: 0 auto;
-    background: #a7a7a7;
     /* css flex */
     display: flex;
-    /*align-items: center;*/
-    /*justify-content: center;*/
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .be-section {
-    /*position: relative;*/
+    position: relative;
     width: 100%;
-    height: 200px;
-    padding: 80px;
+    /*height: 200px;*/
     font-size: 16px;
     box-sizing: border-box;
+    text-align: center;
+    /* css flex */
+    display: flex;
+    justify-content: center;
 }
 
-.test {
+.column-locate {
+    /* css flex */
+    align-items: center;
+    flex-direction: column;
+}
 
+.be-section-wrap {max-width: 1200px;}
+
+.be-section.row-locate > .slides-content {
+    width: 100%;
+    max-width: 2048px;
+    height: 400px;
+    min-height: 200px;
+    /* css flex*/
+    display: flex;
+}
+
+.be-section > .slides-content {
+    /* css flex */
+    display: flex;
+    justify-content: center;
+}
+
+.be-section > .slides-content > li {
+    width: 100%;
+    max-width: 2048px;
+    /* css flex */
+    display: flex;
+    justify-content: center;
+}
+
+.be-section > .slides-content > li > .content-feature {
+    width: 100%;
+    padding: 40px 30px;
+    box-sizing: border-box;
+    max-width: 580px;
+    /* css flex */
+}
+
+.be-section > .slides-content > li > .content-display {
+    width: 49%;
 }
 
 .sentence-wrap {
-    z-index: 3;
+    /*z-index: 3;*/
+    max-width: 1200px;
+    text-align: center;
+    /* css flex */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sentence-wrap > img {
+    opacity: 0.5;
+    width: 50px;
 }
 
 .background-semi-circle {
@@ -36,6 +89,7 @@
     height: 100px;
 }
 
+/* 반원영역 그리기 */
 .background-semi-circle:after {
     content: '';
     display: inline-block;
@@ -48,5 +102,28 @@
     min-width: 1100px;
     left: 50%;
     transform: translateX(-50%);
+}
 
+.be-section-wrap > header {
+    margin-bottom: 50px;
+}
+
+.be-section-wrap > .ui-card {
+    /* css flex */
+    display: flex;
+    justify-content: space-around;
+}
+
+.be-section-wrap > .ui-card > .ui-card-link {
+    width: 30%;
+}
+
+.be-section-wrap > .customer-logo > img {
+    max-width: 500px;
+}
+
+.feature-block {
+    /* css-flex */
+    display: flex;
+    justify-content: space-around;
 }
