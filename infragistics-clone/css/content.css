@@ -13,6 +13,12 @@
     justify-content: center;
 }
 
+.h3-absolute.h3-white {
+    color: white;
+    padding: 10px 0 10px 0;
+    font-size: 1.4rem;
+}
+
 .be-section {
     position: relative;
     width: 100%;
@@ -32,6 +38,20 @@
 }
 
 .be-section-wrap {max-width: 1200px;}
+
+.slides-content > li > .content-feature > h2 {
+    font-size: 2.0em;
+    margin-bottom: 20px;
+}
+
+.slides-content > li > .content-feature > p {
+    margin-bottom: 30px;
+}
+
+.slides-content > li > .content-feature > p > a:hover {
+    color: white;
+    opacity: 0.5;
+}
 
 .be-section.row-locate > .slides-content {
     width: 100%;
@@ -93,7 +113,7 @@
 .background-semi-circle:after {
     content: '';
     display: inline-block;
-    background-color: rgba( 255, 255, 255, 0.5 );
+    background-color: rgba( 255, 255, 255, 1 );
     width: 105%;
     border-radius: 50%;
     height: 250px;
@@ -108,6 +128,10 @@
     margin-bottom: 50px;
 }
 
+.be-section-wrap > .row-text > header > p {
+    font-weight: bold;
+}
+
 .be-section-wrap > .ui-card {
     /* css flex */
     display: flex;
@@ -115,7 +139,30 @@
 }
 
 .be-section-wrap > .ui-card > .ui-card-link {
+    position: relative;
     width: 30%;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+    border: 1px solid #dedede;
+    box-shadow: 0 0 20px -2px rgb(0 0 0 / 25%);
+}
+
+.be-section-wrap > .ui-card > .ui-card-link > a {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    font-weight: 700;
+}
+
+.be-section-wrap > .ui-card > .ui-card-link > .ui-card-content {
+    padding: 20px;
+    text-align: left;
+    font-weight: 500;
+}
+
+.be-section-wrap > .ui-card > .ui-card-link > .ui-card-content > h3 {
+    font-size: 1.3em;
+    margin-bottom: 25px;
 }
 
 .be-section-wrap > .customer-logo > img {
@@ -123,7 +170,67 @@
 }
 
 .feature-block {
+    text-align: left;
     /* css-flex */
     display: flex;
     justify-content: space-around;
+}
+
+.feature-block > .feature-block-items {
+    padding: 40px 0 40px 0;
+    margin-left: 50px;
+}
+
+.feature-block > .feature-block-items > a {
+    position: absolute;
+    bottom: 10px;
+}
+
+.feature-block > .feature-block-items:nth-child(1) {
+    margin-left: 0;
+}
+
+.feature-block > .feature-block-items > .feature-block-content > h3 {
+    margin-bottom: 20px;
+}
+
+.promo-content {
+    /* css flex */
+    display: flex;
+}
+
+.promo-content > .content-ultimate {
+    width: 65%;
+}
+
+.promo-content > .content-promo-feature {
+    margin-left: 50px;
+    width: 33%;
+}
+
+.promo-content > .content-promo-feature > ul {
+    padding-bottom: 20px;
+    font-weight: bold;
+   /* css flex*/
+    display: flex;
+}
+
+.promo-content > .content-promo-feature > ul > li:nth-child(1) {
+    padding-right: 15px;
+}
+
+.promo-content > .content-promo-feature > ul > li:nth-child(2) {
+    padding: 0 15px 0 15px;
+    border-left: 1px solid white;
+}
+
+/* 클래스 추가입력 요망 */
+/*.content-font-white > p > a:hover {*/
+/*    color: white;*/
+/*    opacity: 0.5;*/
+/*}*/
+
+.content-font-white.hover-white:hover {
+    color: white;
+    opacity: 0.5;
 }

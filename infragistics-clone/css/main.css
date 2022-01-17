@@ -13,7 +13,9 @@ a{
 a:hover {
     color: #0000ff;
 }
-
+p {
+    line-height: 1.5em;
+}
 /* 마우스로 드래그시 */
 ::selection {
     background: black;
@@ -37,6 +39,20 @@ h2 {
     font-size: 2.8rem;
     line-height: 1.25em;
 }
+
+.h3-absolute {
+    position: absolute;
+    width: 100%;
+}
+
+.content-font-white {
+    color: white;
+}
+
+.text-align-left {
+    text-align: left;
+}
+
 /* 전체영역 */
 #main {
     width: 100%;
