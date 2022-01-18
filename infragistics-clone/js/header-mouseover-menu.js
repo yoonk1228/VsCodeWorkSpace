@@ -5,12 +5,9 @@ function menuSelector() {
     menuArr[i].addEventListener('mouseover', () => {
       let menuBtn = menuArr[i].querySelector('a')
       let menuPopup = menuArr[i].querySelector('ul')
-      menuBtn.addEventListener('mouseover', () => {
-        menuPopup.style.display = `block`
-      })
-      menuBtn.addEventListener('mouseout', () => {
-        menuPopup.style.display = `none`
-      })
+
+      menuBtn.addEventListener('mouseover', () => menuPopup.style.display = `block`)
+      menuBtn.addEventListener('mouseout', () => menuPopup.style.display = `none`)
     })
   }
 }

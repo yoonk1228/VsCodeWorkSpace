@@ -99,6 +99,10 @@
     align-items: center;
 }
 
+.sentence-wrap > h1 > span > .wrap {
+    border-right: 4px solid #a7a7a7;
+}
+
 .sentence-wrap > img {
     opacity: 0.5;
     width: 50px;
