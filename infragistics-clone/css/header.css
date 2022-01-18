@@ -66,12 +66,20 @@
 
 .navigation-main > li > ul {
     /* js 구현 */
-    /*display: none;*/
-    display: block;
+    display: none;
+    /*display: block;*/
     position: absolute;
     box-sizing: border-box;
-    top: 160%;
-    /*transform: translateX(-50%);*/
+    top: 150%;
+    left: -50%;
+    margin-top: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    min-width: 210px;
+    max-width: 300px;
+    transform: translateX(-50%);
+
 }
 
 .navigation-main > li > .navigation-submenu {
