@@ -19,6 +19,7 @@ function menuSelector() {
 //
 // }
 
+/* 페이지 진입시 실행 */
 function init() {
   menuSelector()
   // test()
