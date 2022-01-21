@@ -36,11 +36,99 @@
             <ul class="navigation-main">
               <li class="menu-full-width">
                 <a class="navigation-submenu">Design & Development</a>
-                <ul>
-
-                </ul>
+                <!-- design & development navigation wrap -->
+                <!-- display, opacity 조작 -->
+                <div class="menu-full-width-wrap">
+                  <ul style="display: none;">
+                    <li>
+                      <div class="navigation-submenu-left">
+                        <div class="navigation-submenu-left-items">
+                          <div class="navigation-submenu-header">
+                            BEST VALUE BUNDLES
+                          </div>
+                          <div class="emphasize first-em"  >
+                            <a>
+                              <span class="navigation-submenu-title">
+                                Infragistics Ultimate
+                              </span>
+                              <span class="navigation-submenu-price">
+                                $1,495
+                              </span>
+                              <span class="deemphasize">
+                                The only complete UX/UI toolkit for building high performance, modern web, mobile and desktop applications.
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="navigation-submenu-left-items">
+                          <div class="emphasize sec-em"  >
+                            <a>
+                              <span class="navigation-submenu-title">
+                                Infragistics Professional
+                              </span>
+                              <span class="navigation-submenu-price">
+                                $1,295
+                              </span>
+                              <span class="deemphasize">
+                                The comprehensive UI components library for web, mobile and desktop developers.
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="navigation-submenu-left-items">
+                          <div class="emphasize third-em"  >
+                            <a>
+                              <span class="navigation-submenu-title">
+                                Ignite UI
+                              </span>
+                              <span class="navigation-submenu-price">
+                                $1,295
+                              </span>
+                              <span class="deemphasize">
+                                A complete library of UI components for building modern, data-rich and responsive web apps.
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <header>Web</header>
+                      <a>App Builder <strong>(New)</strong></a>
+                      <a>ignite UI</a>
+                      <!-- left padding -->
+                      <a>Angular</a>
+                      <a>ASP.NET Core</a>
+                      <a>ASP.NET MVC</a>
+                      <a>Blazor</a>
+                      <a>jQuery</a>
+                      <a>React</a>
+                      <a>Web Components</a>
+                      <a>Ultimate UI for ASP.NET Web Forms</a>
+                    </li>
+                    <li>
+                      <header>Desktop</header>
+                      <a>Ultimate UI for Windows Forms</a>
+                      <a>Ultimate UI for WPF</a>
+                      <header class="menu-second-header">Cross Platform</header>
+                      <a>Ultimate UI for Uno</a>
+                      <a>Ultimate UI for UWP</a>
+                      <a>Ultimate UI for WinUI</a>
+                      <a>Ultimate UI for Xamarin</a>
+                    </li>
+                    <li>
+                      <header>Design to Code</header>
+                      <a>Indigo.Design</a>
+                      <a>App Builder <strong>(New)</strong></a>
+                      <header class="menu-second-header">Automated Testing Tools</header>
+                      <a>Test automation for MicroFocus UFT: Windows Forms</a>
+                      <a>Test automation for MicroFocus UFT: WPF</a>
+                      <a>Test automation for IBM RFT: Windows Forms</a>
+                    </li>
+                  </ul>
+                </div>
               </li>
-              <li>
+              <li style="display: block;">
                 <a class="navigation-submenu">UX</a>
                 <ul>
                   <li>
@@ -152,7 +240,9 @@
           </nav>
           <!-- todo bodrer 사용해 돋보기 모양 만들기 -->
           <div class="global-search-toggle">
-
+            <div class="global-search-close">
+              <i></i>
+            </div>
           </div>
         </div>
       </div>
@@ -164,12 +254,12 @@
         <div class="be-section-wrap">
           <div class="sentence-wrap">
             <h1 style="margin-bottom: 50px; font-weight: normal; line-height: 1.3em; letter-spacing: 2px;">
-              어떤 프로젝트를 맡던 <br>개발팀원으로서의 <strong>김윤재</strong>는 <br>
+              어떤 프로젝트를 맡던 <br>팀원으로서의 <strong>김윤재</strong>는 <br>
               <span class="txt-rotate" data-period="2000"
                     data-rotate='["팀이 원하는대로","수단과 방법을 안 가리고","숙취에 절어도","개같이 어떻게든","어떠한 요구사항이든"]'>
                 <span class="wrap"></span>
               </span>
-              <br>작업을 완수할 수 있습니다.
+              <br>개발할 수 있습니다.
             </h1>
             <script src="../js/typewriter.js" type="text/javascript">
             </script>
@@ -258,24 +348,71 @@
             <img src="../img/customer-stories-super-stream-pasona-tech-battelle-v3.jpg" alt="#">
           </div>
         </div>
-        <div class="be-section row-locate" style="background: #3F51B5; margin: 70px 0 50px 0">
-          <!-- opacity, z-index 조작 -->
-          <ul class="slides-content">
-            <li>
-              <div class="content-feature">
-                <h2 class="content-font-white text-align-left">Maintaining uptime at leading industrial plants globally</h2>
-                <p class="content-font-white text-align-left">A prominent UK investment bank used Infragistics’ high-performing Ignite UI toolkit with 65+ Angular components to add a modern, user-friendly UI and very fast data grids to critical software in its new Risk and Finance Solutions division.</p>
-                <p class="content-font-white text-align-left">
-                  <a class="content-font-white text-align-left hover-white">Read the Story</a>
-                </p>
-              </div>
-              <div class="content-display">
-                <img src="../img/Bently-Nevada-2-960.jpg" alt="#">
-              </div>
-            </li>
-            <!-- +list (feature,display 3개) -->
-          </ul>
+        <div class="be-section row-locate wrap">
+          <div class="be-section row-locate" style="background: #3F51B5;">
+            <ul class="slides-content">
+              <!-- 1 -->
+              <li style="display: flex;">
+                <div class="content-feature">
+                  <h2 class="content-font-white text-align-left">Maintaining uptime at leading industrial plants globally</h2>
+                  <p class="content-font-white text-align-left">A prominent UK investment bank used Infragistics’ high-performing Ignite UI toolkit with 65+ Angular components to add a modern, user-friendly UI and very fast data grids to critical software in its new Risk and Finance Solutions division.</p>
+                  <p class="content-font-white text-align-left">
+                    <a class="content-font-white text-align-left hover-white">Read the Story</a>
+                  </p>
+                </div>
+                <div class="content-display">
+                  <img src="../img/Bently-Nevada-2-960.jpg" alt="#">
+                </div>
+              </li>
+              <!-- 2 -->
+              <li style="display: none;">
+                <div class="content-feature">
+                  <h2 class="content-font-white text-align-left">Bringing modern Angular look and feel to bank’s essential pricing application</h2>
+                  <p class="content-font-white text-align-left">A prominent UK investment bank used Infragistics’ high-performing Ignite UI toolkit with 65+ Angular components to add a modern, user-friendly UI and very fast data grids to critical software in its new Risk and Finance Solutions division.</p>
+                  <p class="content-font-white text-align-left">
+                    <a class="content-font-white text-align-left hover-white">Read the Story</a>
+                  </p>
+                </div>
+                <div class="content-display">
+                  <img src="../img/Tier-1-Investment-Bank-2-960.jpg" alt="#">
+                </div>
+              </li>
+              <!-- 3 -->
+              <li style="display: none;">
+                <div class="content-feature">
+                  <h2 class="content-font-white text-align-left">Scaling capacity by 30% without making a single hire</h2>
+                  <p class="content-font-white text-align-left">Packaging design and fulfillment leader, Stephen Gould, continuously seeks to create design innovations and scale capacity for clients such as Tiffany’s and Rosetta Stone. With the help of Slingshot, a modern digital workplace, the company has dramatically improved cross-department collaboration resulting in higher productivity.</p>
+                  <p class="content-font-white text-align-left">
+                    <a class="content-font-white text-align-left hover-white">Read the Story</a>
+                  </p>
+                </div>
+                <div class="content-display">
+                  <img src="../img/Tier-1-Investment-Bank-2-960.jpg" alt="#">
+                </div>
+              </li>
+              <!-- 4 -->
+              <li style="display: none;">
+                <div class="content-feature">
+                  <h2 class="content-font-white text-align-left">Visualizing complex data in ways never before possible</h2>
+                  <p class="content-font-white text-align-left">Large government agencies, banks and manufacturers use Atanasoft’s database productivity tools to access big data stored in Teradata or other data warehouses. By embedding Reveal’s business intelligence features into its tools, customers now see this complex data displayed in clear, visually compelling visualizations and dashboards.</p>
+                  <p class="content-font-white text-align-left">
+                    <a class="content-font-white text-align-left hover-white">Read the Story</a>
+                  </p>
+                </div>
+                <div class="content-display">
+                  <img src="../img/Tier-1-Investment-Bank-2-960.jpg" alt="#">
+                </div>
+              </li>
+            </ul>
+            <ol class="slide-btn">
+              <li onclick="selectHandler(1)">0</li>
+              <li onclick="selectHandler(2)">1</li>
+              <li onclick="selectHandler(3)">2</li>
+              <li onclick="selectHandler(4)">3</li>
+            </ol>
+          </div>
         </div>
+        <script src="../js/display-auto-select.js" type="text/javascript"></script>
       </section>
       <!-- SECTION: Ideas that Inspire-->
       <section class="be-section" style="padding-top: 50px;">
@@ -400,37 +537,193 @@
         </div>
       </section>
       <!-- SECTION: WT-->
-      <section class="be-section" style="padding: 60px 0 40px 0;">
+      <section class="be-section wt" style="padding: 60px 0 40px 0;">
         <div class="be-section-wrap">
-          <header>
+          <header class="wt-header">
             <h2>Working Together and Pushing Boundaries</h2>
           </header>
-          <div class="#">
-            <ul class="#">
-              <li>
-                <img src="#" alt="#">
-                <span></span>
-              <li>
-                <img src="#" alt="#">
+          <div class="wt-slides-section-wrap">
+            <ul class="wt-logo">
+              <li style="background-color: #c60031" onclick="logoClickHandler(1)">
+                <img src="../img/wt/rutgers-logo.svg" alt="#">
                 <span></span>
               </li>
-              <li>
-                <img src="#" alt="#">
+              <li style="background-color: #0067b8" onclick="logoClickHandler(2)">
+                <img src="../img/wt/microsoft-gold-partner-logo-updated.svg" alt="#">
                 <span></span>
               </li>
-              <li>
-                <img src="#" alt="#">
+              <li style="background-color: #34474f" onclick="logoClickHandler(3)">
+                <img src="../img/wt/angular-logo.svg" alt="#">
+                <span></span>
+              </li>
+              <li style="background-color: #660033" onclick="logoClickHandler(4)">
+                <img src="../img/wt/stevens-institute-technology-logo.svg" alt="#">
                 <span></span>
               </li>
             </ul>
-            <div class="#">
-              <div class="#">
-                <!-- List 슬라이드 -->
-                <ul>
-                  <li></li>
-                </ul>
-              </div>
-            </div>
+          </div>
+        </div>
+        <div class="wt-list-wrap">
+          <div class="wt-list-slide">
+            <!-- List 슬라이드 -->
+            <!--style="transform: translateX(-800px)"-->
+            <ul>
+              <!-- 1 -->
+              <li>
+                <div>
+                  <div>
+                    <div>
+                      <img src="../img/wt/stevens-institute-technology-premal-kamdar.jpg" alt="#">
+                    </div>
+                    <div>
+                      <h3>
+                        Supporting the Next Generation of Developers and Entrepreneurs
+                      </h3>
+                      <p>
+                        The Stevens Venture Center (SVC) is an innovative entrepreneurship ecosystem designed to connect Stevens entrepreneurs with infrastructure, resources and funding assistance so they can develop sustainable and successful commercial enterprises based on either Stevens-derived or individually conceived technologies.
+                      </p>
+                      <a>
+                        Read More
+                      </a>
+                      <figure>
+                        <blockquote>
+                          <p>
+                            "We are grateful for the support from partners like Infragistics, which are willing to share their technology and UX/UI expertise."
+                          </p>
+                        </blockquote>
+                        <figcaption>
+                          Premal Kamdar, Entrepreneur in Residence at the Stevens Venture Center
+                        </figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!-- 2 -->
+              <li>
+                <div>
+                  <div>
+                    <div>
+                      <img src="../img/wt/stevens-institute-technology-premal-kamdar.jpg" alt="#">
+                    </div>
+                    <div>
+                      <h3>
+                        Supporting the Next Generation of Developers and Entrepreneurs
+                      </h3>
+                      <p>
+                        The Stevens Venture Center (SVC) is an innovative entrepreneurship ecosystem designed to connect Stevens entrepreneurs with infrastructure, resources and funding assistance so they can develop sustainable and successful commercial enterprises based on either Stevens-derived or individually conceived technologies.
+                      </p>
+                      <a>
+                        Read More
+                      </a>
+                      <figure>
+                        <blockquote>
+                          <p>
+                            "We are grateful for the support from partners like Infragistics, which are willing to share their technology and UX/UI expertise."
+                          </p>
+                        </blockquote>
+                        <figcaption>
+                          Premal Kamdar, Entrepreneur in Residence at the Stevens Venture Center
+                        </figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!-- 3 -->
+              <li>
+                <div>
+                  <div>
+                    <div>
+                      <img src="../img/wt/stevens-institute-technology-premal-kamdar.jpg" alt="#">
+                    </div>
+                    <div>
+                      <h3>
+                        Supporting the Next Generation of Developers and Entrepreneurs
+                      </h3>
+                      <p>
+                        The Stevens Venture Center (SVC) is an innovative entrepreneurship ecosystem designed to connect Stevens entrepreneurs with infrastructure, resources and funding assistance so they can develop sustainable and successful commercial enterprises based on either Stevens-derived or individually conceived technologies.
+                      </p>
+                      <a>
+                        Read More
+                      </a>
+                      <figure>
+                        <blockquote>
+                          <p>
+                            "We are grateful for the support from partners like Infragistics, which are willing to share their technology and UX/UI expertise."
+                          </p>
+                        </blockquote>
+                        <figcaption>
+                          Premal Kamdar, Entrepreneur in Residence at the Stevens Venture Center
+                        </figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!-- 4 -->
+              <li>
+                <div>
+                  <div>
+                    <div>
+                      <img src="../img/wt/stevens-institute-technology-premal-kamdar.jpg" alt="#">
+                    </div>
+                    <div>
+                      <h3>
+                        Supporting the Next Generation of Developers and Entrepreneurs
+                      </h3>
+                      <p>
+                        The Stevens Venture Center (SVC) is an innovative entrepreneurship ecosystem designed to connect Stevens entrepreneurs with infrastructure, resources and funding assistance so they can develop sustainable and successful commercial enterprises based on either Stevens-derived or individually conceived technologies.
+                      </p>
+                      <a>
+                        Read More
+                      </a>
+                      <figure>
+                        <blockquote>
+                          <p>
+                            "We are grateful for the support from partners like Infragistics, which are willing to share their technology and UX/UI expertise."
+                          </p>
+                        </blockquote>
+                        <figcaption>
+                          Premal Kamdar, Entrepreneur in Residence at the Stevens Venture Center
+                        </figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!-- 5 (clone) -->
+<!--              <li>-->
+<!--                <div>-->
+<!--                  <div>-->
+<!--                    <div>-->
+<!--                      <img src="../img/wt/stevens-institute-technology-premal-kamdar.jpg" alt="#">-->
+<!--                    </div>-->
+<!--                    <div>-->
+<!--                      <h3>-->
+<!--                        Supporting the Next Generation of Developers and Entrepreneurs-->
+<!--                      </h3>-->
+<!--                      <p>-->
+<!--                        The Stevens Venture Center (SVC) is an innovative entrepreneurship ecosystem designed to connect Stevens entrepreneurs with infrastructure, resources and funding assistance so they can develop sustainable and successful commercial enterprises based on either Stevens-derived or individually conceived technologies.-->
+<!--                      </p>-->
+<!--                      <a>-->
+<!--                        Read More-->
+<!--                      </a>-->
+<!--                      <figure>-->
+<!--                        <blockquote>-->
+<!--                          <p>-->
+<!--                            "We are grateful for the support from partners like Infragistics, which are willing to share their technology and UX/UI expertise."-->
+<!--                          </p>-->
+<!--                        </blockquote>-->
+<!--                        <figcaption>-->
+<!--                          Premal Kamdar, Entrepreneur in Residence at the Stevens Venture Center-->
+<!--                        </figcaption>-->
+<!--                      </figure>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </li>-->
+            </ul>
           </div>
         </div>
       </section>
@@ -599,6 +892,8 @@
   <div id="drift">
   </div>
 </body>
-<script src="../js/header-mouseover-menu.js" type="text/javascript">
-</script>
+<script src="../js/header-mouseover-menu.js" type="text/javascript"></script>
+<script src="../js/img-mouseover-scale.js" type="text/javascript"></script>
+<script src="../js/wt-logo-click.js"></script>
+<!--<script src="../js/submenu-hover-color.js" type="text/javascript"></script>-->
 </html>
