@@ -71,6 +71,7 @@
     max-width: 2048px;
     height: 400px;
     min-height: 200px;
+    position: relative;
     /* css flex*/
     display: flex;
 }
@@ -267,30 +268,26 @@
     z-index: 10;
 }
 
-.be-section.row-locate > ol {
+.slide-btn {
     width: 150px;
     background-color: transparent;
     position: absolute;
     left: 300px;
-    bottom: 50px;
+    bottom: 40px;
     /* css flex */
     display: flex;
     justify-content: space-between;
 }
 
-.be-section.row-locate > ol > li {
+.slide-btn > li {
     width: 24px;
     height: 24px;
     border: 1px solid black;
     border-radius: 50%;
     background-color: white;
-    opacity: 0.5;
+    opacity: 0.6;
     cursor: pointer;
     transition: all 0.3s;
-}
-
-.be-section.row-locate > ol > li:hover {
-    opacity: 1;
 }
 
 .be-section.wt {

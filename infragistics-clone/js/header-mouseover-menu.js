@@ -1,27 +1,32 @@
 const menuArr = document.querySelectorAll('.navigation-main > li')
-const popDD = document.querySelector('.menu-full-width-wrap > ul')
+/* Design & Development Btn */
+const btnDD = document.querySelector('.navigation-submenu')
+const menuDD = document.querySelector('.menu-full-width')
+const popDD = document.querySelector('.menu-full-width-wrap')
 
 function menuSelector() {
   for (let i=0; i<menuArr.length; i++) {
-    menuArr[i].addEventListener('mouseover', () => {
-      let menuBtn = menuArr[i].querySelector('a')
-      let menuPopup = menuArr[i].querySelector('ul')
-      if (i === 0) {
-        menuBtn.addEventListener('mouseover', () => menuPopup.style.display = `flex`)
-        menuBtn.addEventListener('mouseout', () => menuPopup.style.display = `none`)
-      } else {
-        // menuBtn.addEventListener('mouseover', () => menuArr.style.display = `block`)
-        menuBtn.addEventListener('mouseover', () => console.log(menuArr[i]))
-        menuBtn.addEventListener('mouseout', () => menuArr.style.display = `none`)
-      }
-    })
+    if (i === 0) {
+      btnDD.addEventListener('mouseover', () => {
+        popDD.style.opacity = `1`
+        popDD.setAttribute(`style`, `visibility: visible;`)
+      })
+      popDD.addEventListener('mouseover', () => {
+        popDD.style.opacity = `1`
+        popDD.setAttribute(`style`, `visibility: visible;`)
+      })
+      menuDD.addEventListener('mouseout', () => {
+        // popDD.style.opacity = `0`
+        popDD.setAttribute(`style`, `visibility: hidden;`)
+      })
+    } else {
+      menuArr[i].addEventListener('mouseover', () => {
+
+      })
+    }
   }
 }
 
-function popupOver () {
-  popDD.addEventListener('mouseover', () => popDD.style.display = `flex`)
-  popDD.addEventListener('mouseout', () => popDD.style.display = `none`)
-}
 // function test() {
 //
 // }
@@ -29,7 +34,6 @@ function popupOver () {
 /* 페이지 진입시 실행 */
 function init() {
   menuSelector()
-  popupOver()
   // test()
 }
 init()

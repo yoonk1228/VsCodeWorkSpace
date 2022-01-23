@@ -62,12 +62,13 @@
 
 .navigation-main > li {
     padding: 5px 13px 5px 13px;
+    /*display: block;*/
 }
 
 .navigation-main > li > ul {
     /* js 구현 */
-    display: none;
-    /*display: block;*/
+    /*display: none;*/
+    display: block;
     position: absolute;
     box-sizing: border-box;
     top: 150%;
@@ -83,6 +84,8 @@
 
 .menu-full-width-wrap {
     position: absolute;
+    /*animation-delay: 2s;*/
+    transition: all 2s;
     width: 100vw;
     left: 0;
     top: 100%;
@@ -96,7 +99,6 @@
 
 .navigation-main > .menu-full-width > .menu-full-width-wrap > ul {
     max-width: 1200px;
-    transition-duration: 0.5s;
     box-sizing: border-box;
     background: #f1f1f1;
     /* css flex */

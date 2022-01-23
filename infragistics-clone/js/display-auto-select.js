@@ -25,10 +25,24 @@ function contentSelector(n) {
   }
 }
 
+function olSelector(n) {
+  let i = n-1;
+
+  for (let j = 0; j < slideBtnArr.length; j++)
+    if (j === i) {
+      slideBtnArr[i].setAttribute(`style`, `opacity: 0.2`)
+    } else {
+      slideBtnArr[i].setAttribute(`style`, `opacity: 0.6`)
+    }
+}
+
 /* 버튼 클릭시 실행 */
 function selectHandler(n) {
   addEventListener('click', () => {
     contentSelector(n)
+  })
+  addEventListener('mouseover', () =>{
+    olSelector(n)
   })
 }
 
